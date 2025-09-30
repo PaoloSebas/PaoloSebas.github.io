@@ -1,7 +1,7 @@
 ---
 title: "Ignite your students' interest in separable ODEs: a fire engineering application"
 collection: publications
-category: publications
+category: manuscript
 permalink: /publication/2025-05-07-paper-title-number-4
 excerpt: "It is often desirable to have students solve a differential equation having a real application. We discuss such an equation, arising in the field of fire engineering, which models the temperature of a solid that is being heated by a radiative heat flux."
 date: 2025-05-07
