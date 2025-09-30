@@ -1,13 +1,13 @@
 ---
-title: "Paper Title Number 4"
+title: "Ignite your students' interest in separable ODEs: a fire engineering application"
 collection: publications
-category: conferences
-permalink: /publication/2024-02-17-paper-title-number-4
-excerpt: 'This paper is about fixing template issue #693.'
-date: 2024-02-17
-venue: 'GitHub Journal of Bugs'
-paperurl: 'http://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2024). &quot;Paper Title Number 3.&quot; <i>GitHub Journal of Bugs</i>. 1(3).'
+category: publications
+permalink: [/publication/2025-05-07-paper-title-number-4](https://doi.org/10.1080/0020739X.2025.2471439)
+excerpt: 'It is often desirable to have students solve a differential equation having a real application. We discuss such an equation, arising in the field of fire engineering, which models the temperature of a solid that is being heated by a radiative heat flux.'
+date: 2025-05-07
+venue: 'International Journal of Mathematical Education in Science and Technology'
+paperurl: '[http://academicpages.github.io/files/paper3.pdf](https://doi.org/10.1080/0020739X.2025.2471439)'
+citation: 'Nelson, M. I., & Sebastianelli, P. (2025). Ignite your students’ interest in separable ODEs: a fire engineering application. International Journal of Mathematical Education in Science and Technology, 1–22. https://doi.org/10.1080/0020739X.2025.2471439'
 ---
 
 The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
