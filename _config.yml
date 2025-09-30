@@ -24,7 +24,7 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "teaching.png"
-  name             : "Your Sidebar Name"
+  name             : "Welcome!"
   pronouns         : # example: "she/her"  
   bio              : "Educator and Researcher"
   location         : "Wollongong"
