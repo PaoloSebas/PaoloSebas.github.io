@@ -28,7 +28,7 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "Educator and Researcher"
   location         : "Wollongong"
-  employer         : "Australian National University"
+  employer         : "ANU University"
   uri              : # URL
   email            : "Paolo.Sebastianelli@anu.edu.au" 
 
@@ -48,13 +48,13 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "PaoloSebas"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
   artstation       : # Username
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : # "bsky.app" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -86,7 +86,7 @@ publication_category:
   manuscripts:
     title: 'Journal Articles'    
   conferences:
-    title: 'Conference Papers'
+    title: 'Conference Papers/Talk'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
@@ -135,7 +135,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               : s2riot
 facebook:
   username               :
   app_id                 :
