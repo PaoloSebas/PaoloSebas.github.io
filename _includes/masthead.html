@@ -17,27 +17,28 @@
           {% endfor %} -->
 
           {% for link in site.data.navigation.main %}
-           {% if link.url contains 'http' %}
-             {% assign domain = '' %}
-               {% else %}
-                 {% assign domain = base_path %}
-           {% endif %}
+  {% if link.url contains 'http' %}
+    {% assign domain = '' %}
+  {% else %}
+    {% assign domain = base_path %}
+  {% endif %}
 
-           {% if link.children %}
-              <li class="masthead__menu-item dropdown">
-               {{ domain }}{{ link.url }}{{ link.title }}</a>
-              <ul class="sub-menu">
-            {% for child in link.children %}
-              <li>{{ base_path }}{{ child.url }}{{ child.title }}</a></li>
-            {% endfor %}
-              </ul>
-              </li>
-               {% else %}
-               <li class="masthead__menu-item">
-               <a href="{{ domain }}{{ }}{{ link.title }}</a>
-               </li>
-           {% endif %}
-          {% endfor %}
+  {% if link.children %}
+    <li class="masthead__menu-item dropdown">
+      {{ domain }}{{ link.url }}{{ link.title }}</a>
+      <ul class="sub-menu">
+        {% for child in link.children %}
+          <li>{{ base_path }}{{ child.url }}{{ child.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% else %}
+    <li class="masthead__menu-item">
+      <a href="{{ domain }}{{ link.urlk.title }}</a>
+    </li>
+  {% endif %}
+{% endfor %}
+
                 <!-- sopra modifica -->
                  
           <li id="theme-toggle" class="masthead__menu-item persist tail">
