@@ -9,7 +9,7 @@ redirect_from:
 
 I am an interdisciplinary scientist and educator. 
 
-My experience in chemical and physical sciences includes teaching various subjects at both university and secondary schools.
+My experience in chemical and physical sciences includes teaching various subjects, in different languages, at both university and secondary schools.
 
 My background in Chemistry and Physics allowed me to explore various domains of the modern science, leveraging interdisciplinary approaches to elucidate processes in Environment and Earth Science, Atmospheric Physics, Computational Chemistry, Combustion, and Materials Science.
 
