@@ -442,3 +442,44 @@
     }
   }
 }
+
+/* Dropdown submenu styles */
+.masthead__menu-item {
+  position: relative;
+
+  &.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-toggle::after {
+    content: " ▼";
+    font-size: 0.6em;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1000;
+    min-width: 180px;
+
+    li {
+      a {
+        display: block;
+        padding: 10px 15px;
+        color: #333;
+        text-decoration: none;
+
+        &:hover {
+          background-color: #f0f0f0;
+        }
+      }
+    }
+  }
+}
