@@ -478,3 +478,39 @@
   background-color: var(--global-border-color);
   color: var(--global-link-color-hover);
 }
+
+/* Dropdown menu styles */
+.dropdown {
+  position: relative;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  list-style: none;
+  padding: 0.5em 0;
+  margin: 0;
+  z-index: 1000;
+  min-width: 200px;
+}
+
+.dropdown:hover .sub-menu {
+  display: block;
+}
+
+.sub-menu li a {
+  display: block;
+  padding: 0.5em 1em;
+  white-space: nowrap;
+  color: var(--global-text-color);
+  text-decoration: none;
+}
+
+.sub-menu li a:hover {
+  background-color: var(--global-border-color);
+  color: var(--global-link-color-hover);
+}
