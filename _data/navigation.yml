@@ -11,11 +11,12 @@ main:
 
   - title: "Teaching"
     url: /teaching/
+    
     children:
     - title: Teaching Experience
       url: /teaching/experience/
     - title: Teaching Philosophy
-
+      url: /teaching/phylosophy/
 
   - title: "Portfolio"
     url: /portfolio/
