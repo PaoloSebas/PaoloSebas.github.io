@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Teaching Philosphy"
+title: "Teaching Philosophy"
 permalink: /teaching/philosophy/
 author_profile: false
 ---
