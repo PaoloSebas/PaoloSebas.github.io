@@ -7,6 +7,3 @@ venue: "University of Wollongong, Department of Physics"
 date: 2025-03-01
 location: "Wollongong, Australia"
 ---
-
-...
-
