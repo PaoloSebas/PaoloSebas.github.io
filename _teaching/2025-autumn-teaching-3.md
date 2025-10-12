@@ -1,0 +1,9 @@
+---
+title: "Lab Demonstrator (CHEM103) "
+collection: teaching
+type: "Undergraduate course"
+permalink: /teaching/2025-autumn-teaching-3
+venue: "University of Wollongong, Department of Chemistry"
+date: 2025-03-01
+location: "Wollongong, Australia"
+---
