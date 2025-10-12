@@ -1,5 +1,5 @@
 ---
-title: "Lecturer"
+title: "Lecturer (PYS233) - Introduction to Environmental Physics"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2025-autumn-teaching-1
