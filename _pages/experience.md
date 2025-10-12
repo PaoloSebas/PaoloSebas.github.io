@@ -6,7 +6,6 @@ author_profile: false
 ---
 
 {% include base_path %}
-
-{% for post in site.teaching reversed %}
+Below, you will find a detailed overview of my teaching experience, listed in reverse chronological order (most recent first).{% for post in site.teaching reversed %}
   {% include archive-single.html %}
 {% endfor %}
