@@ -6,7 +6,7 @@ author_profile: false
 ---
 
 <p>
-  <img src="/Images/Career.png" alt="Career history" style="max-width: 100%;">
+  <img src="/images/Career.png" alt="Career history" style="max-width: 100%;">
 </p>
 
 {% include base_path %}
