@@ -7,4 +7,5 @@ excerpt: 'Do terrestrial geomagnetic field reversals have an effect on Earth's c
 date: 2021-02-19 
 venue: 'Science'
 paperurl: 'https://doi.org/10.1126/science.abb8677'
+citation: 'Science'
 ---
