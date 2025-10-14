@@ -1,7 +1,7 @@
 ---
-title: "Portfolio item number 1"
+title: "If you can't explain it simply, you don't understand it well enough. A.E"
 excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+I spent more than three years at the National University of La Pampa ([UNLPam](https://www.unlpam.edu.ar/)) as a Subject Coordinator, a Lecturer, and an Associate Lecturer in different subjects: General Chemistry, Physical Chemistry, Electromagnetism, General Physics, Mathemathics. It was a challenging time, in another country delivering concepts in another language, but it was really beautiful. 
