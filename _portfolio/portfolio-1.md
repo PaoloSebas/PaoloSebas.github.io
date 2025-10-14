@@ -1,6 +1,6 @@
 ---
 title: "If you can't explain it simply, you don't understand it well enough. A.E"
-excerpt: "Outdoor teaching <br/><img src='/images/agro.png'>"
+excerpt: "Some old-fashion lab and Outdoor teaching <br/><img src='/images/agro.png'>"
 collection: portfolio
 ---
 
