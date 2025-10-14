@@ -1,6 +1,6 @@
 ---
 title: "If you can't explain it simply, you don't understand it well enough. A.E"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+excerpt: "Outdoor teaching <br/><img src='/images/agro.png'>"
 collection: portfolio
 ---
 
