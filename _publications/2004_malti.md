@@ -7,6 +7,5 @@ excerpt: "The study of non-hydrolytic reactions for the synthesis of Mg x Al2(1�
 date: 2018-01-27
 venue: "Journal of Sol-Gel Science and Technology"
 paperurl: "https://link.springer.com/article/10.1023/B:JSST.0000047967.82122.6f"
-citation: "A Non-Hydrolytic Sol-Gel Approach for the Preparation of Mg x Al2 (1− x) Ti (1+ x) O5 Powders
-ML Di Vona, R Polini, P Sebastianelli, S Licoccia - Journal of sol-gel science and technology, 2004"
+citation: "A Non-Hydrolytic Sol-Gel Approach for the Preparation of Mg x Al2 (1− x) Ti (1+ x) O5 Powders ML Di Vona, R Polini, P Sebastianelli, S Licoccia - Journal of sol-gel science and technology, 2004"
 ---
