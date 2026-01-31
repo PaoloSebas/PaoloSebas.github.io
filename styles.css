@@ -369,6 +369,49 @@ body {
     text-decoration: underline;
 }
 
+/* Academic gallery */
+.md-gallery {
+    max-width: 1000px;
+    margin: 40px auto 0;
+    padding: 0 20px 40px;
+}
+
+.gallery-item {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    margin: 30px 0;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.gallery-item.is-visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-caption {
+    padding: 20px 24px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    background: #fff;
+}
+
+@media (max-width: 768px) {
+    .md-gallery {
+        padding: 0 12px 30px;
+    }
+}
+
 /* Contact Section */
 .contact-section {
     padding: 80px 40px;

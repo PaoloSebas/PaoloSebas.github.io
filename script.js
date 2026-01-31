@@ -73,7 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
     navigateTo('home');
 
     // Load markdown content for sections
-    loadMarkdownSections();
+    loadMarkdownSections().then(() => {
+        enhanceGalleries();
+    });
     
     // Add hover effects to split sections
     const splitHalves = document.querySelectorAll('.split-half');
@@ -100,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Load markdown files into placeholders
 async function loadMarkdownSections() {
-    const mdBlocks = document.querySelectorAll('.md-content[data-md]');
+    const mdBlocks = document.querySelectorAll('.md-content[data-md], .md-gallery[data-md]');
 
     for (const block of mdBlocks) {
         const src = block.getAttribute('data-md');
@@ -125,6 +127,45 @@ async function loadMarkdownSections() {
             console.error(error);
         }
     }
+}
+
+// Enhance gallery markup and add scroll reveal
+function enhanceGalleries() {
+    const galleries = document.querySelectorAll('.md-gallery');
+
+    galleries.forEach(gallery => {
+        const images = Array.from(gallery.querySelectorAll('img'));
+
+        images.forEach(img => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'gallery-item reveal-on-scroll';
+
+            const caption = img.nextElementSibling && img.nextElementSibling.tagName === 'P'
+                ? img.nextElementSibling
+                : null;
+
+            img.classList.add('gallery-image');
+            img.parentNode.insertBefore(wrapper, img);
+            wrapper.appendChild(img);
+
+            if (caption) {
+                caption.classList.add('gallery-caption');
+                wrapper.appendChild(caption);
+            }
+        });
+    });
+
+    const revealItems = document.querySelectorAll('.reveal-on-scroll');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    revealItems.forEach(item => revealObserver.observe(item));
 }
 
 // Add parallax effect on scroll
