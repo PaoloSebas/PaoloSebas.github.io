@@ -68,7 +68,7 @@ body {
 }
 
 .academic-side::before {
-    background-image: url("Images/academic.jpg");
+    background-image: url("Images/academic.png");
 }
 
 .datascience-side::before {
