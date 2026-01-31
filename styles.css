@@ -72,7 +72,7 @@ body {
 }
 
 .datascience-side::before {
-    background-image: url("Images/datascience.jpg");
+    background-image: url("Images/datascience.png");
 }
 
 .split-half:hover::before {
