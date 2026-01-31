@@ -55,6 +55,30 @@ body {
     background: var(--datascience-gradient);
 }
 
+.split-half::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    z-index: 1;
+}
+
+.academic-side::before {
+    background-image: url("Images/academic.jpg");
+}
+
+.datascience-side::before {
+    background-image: url("Images/datascience.jpg");
+}
+
+.split-half:hover::before {
+    opacity: 0.85;
+}
+
 .split-half .overlay {
     position: absolute;
     top: 0;
