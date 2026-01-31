@@ -174,7 +174,7 @@ window.addEventListener('scroll', () => {
     const parallaxElements = document.querySelectorAll('.hero-section');
     
     parallaxElements.forEach(element => {
-        const speed = 0.5;
+        const speed = 0.8;
         element.style.transform = `translateY(${scrolled * speed}px)`;
     });
 });
