@@ -177,6 +177,15 @@ window.addEventListener('scroll', () => {
         const speed = 0.8;
         element.style.transform = `translateY(${scrolled * speed}px)`;
     });
+
+    // Fade out academic hero image on scroll
+    const academicHeroImage = document.querySelector('#academic-home .hero-section .md-content img');
+    if (academicHeroImage) {
+        const fadeStart = 0;
+        const fadeEnd = 300;
+        const progress = Math.min(Math.max((scrolled - fadeStart) / (fadeEnd - fadeStart), 0), 1);
+        academicHeroImage.style.opacity = `${1 - progress}`;
+    }
 });
 
 // Prevent dropdown menu from closing when clicking inside
