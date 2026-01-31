@@ -1,0 +1,68 @@
+/* Custom CSS for dark background image on home page */
+
+/* Apply background image to the main content area on home page */
+body.layout--home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/Snap_mi_page.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Optimize text colors for dark background */
+body.layout--home .page__content,
+body.layout--home .page__content p,
+body.layout--home .page__content li {
+  color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+}
+
+/* Headings with better contrast */
+body.layout--home .page__content h1,
+body.layout--home .page__content h2,
+body.layout--home .page__content h3,
+body.layout--home .page__content h4 {
+  color: #ffffff !important;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+  font-weight: 600;
+}
+
+/* Links optimization */
+body.layout--home .page__content a {
+  color: #64B5F6 !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  font-weight: 600;
+}
+
+body.layout--home .page__content a:hover {
+  color: #90CAF9 !important;
+  text-decoration: underline;
+}
+
+/* Main content background for better readability */
+body.layout--home .page__inner-wrap {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2em;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+/* Sidebar text optimization */
+body.layout--home .sidebar {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1em;
+  border-radius: 10px;
+}
+
+body.layout--home .sidebar .author__name,
+body.layout--home .sidebar p,
+body.layout--home .sidebar li {
+  color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+body.layout--home .sidebar a {
+  color: #64B5F6 !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
