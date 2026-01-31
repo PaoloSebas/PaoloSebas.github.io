@@ -1,0 +1,398 @@
+/* Reset e Variabili */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --academic-color: #2c3e50;
+    --academic-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --datascience-color: #1a73e8;
+    --datascience-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --text-dark: #333;
+    --text-light: #fff;
+    --bg-light: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    color: var(--text-dark);
+}
+
+/* Homepage Split Screen */
+.split-screen {
+    display: none;
+    height: 100vh;
+    width: 100%;
+}
+
+.split-screen.active {
+    display: flex;
+}
+
+.split-half {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: flex 0.7s ease;
+}
+
+.split-half:hover {
+    flex: 1.2;
+}
+
+.academic-side {
+    background: var(--academic-gradient);
+}
+
+.datascience-side {
+    background: var(--datascience-gradient);
+}
+
+.split-half .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+}
+
+.split-half:hover .overlay {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.split-half .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--text-light);
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.split-half:hover .content {
+    transform: scale(1.05);
+}
+
+.split-half .icon {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.split-half h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.split-half p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.explore-btn {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid var(--text-light);
+    color: var(--text-light);
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.explore-btn:hover {
+    background: var(--text-light);
+    color: var(--text-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Portfolio Sections */
+.portfolio-section {
+    display: none;
+    min-height: 100vh;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.portfolio-section.active {
+    display: block;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.98));
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--academic-color);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    align-items: center;
+}
+
+.nav-menu > li > a {
+    text-decoration: none;
+    color: var(--text-dark);
+    padding: 10px 20px;
+    display: block;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-menu > li > a:hover {
+    color: var(--academic-color);
+}
+
+.nav-menu > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--academic-color);
+    transition: width 0.3s ease;
+}
+
+.nav-menu > li > a:hover::after {
+    width: 70%;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    min-width: 200px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li a {
+    padding: 12px 25px;
+    display: block;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background: var(--bg-light);
+    padding-left: 30px;
+    color: var(--academic-color);
+}
+
+/* Switch Button */
+.switch-btn {
+    padding: 10px 25px;
+    background: var(--academic-gradient);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.switch-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+#datascience-portfolio .switch-btn {
+    background: var(--datascience-gradient);
+}
+
+/* Content Area */
+.content-area {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+.section-content {
+    display: none;
+    animation: slideIn 0.5s ease;
+}
+
+.section-content.active {
+    display: block;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    background: var(--academic-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#datascience-portfolio .hero-section h1 {
+    background: var(--datascience-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.section-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--academic-color);
+}
+
+.section-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 40px;
+    text-align: center;
+    background: var(--bg-light);
+}
+
+.contact-section a {
+    color: var(--academic-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-section a:hover {
+    color: var(--datascience-color);
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease;
+}
+
+.fade-in.delay-1 {
+    animation-delay: 0.3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .split-screen {
+        flex-direction: column;
+    }
+    
+    .split-half h1 {
+        font-size: 2rem;
+    }
+    
+    .split-half p {
+        font-size: 1rem;
+    }
+    
+    .nav-container {
+        padding: 0 20px;
+        flex-wrap: wrap;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+}

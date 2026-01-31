@@ -3,69 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sito in Manutenzione</title>
-    <style>
-        /* Stili per centrare tutto e rendere la pagina piacevole */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
-        .container {
-            max-width: 600px;
-            padding: 20px;
-        }
-        .emoji {
-            font-size: 4rem;
-            display: inline-block;
-            animation: pulse 2s infinite;
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            color: #2c3e50;
-        }
-        p {
-            font-size: 1.2rem;
-            color: #7f8c8d;
-            line-height: 1.6;
-        }
-        .contact-link {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 10px 20px;
-            background-color: #0077b5; /* Colore LinkedIn */
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .contact-link:hover {
-            background-color: #005a87;
-        }
-        /* Animazione per l'emoji */
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-    </style>
+    <title>Paolo Sebastiano - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="emoji">🚧</div>
-        <h1>Work in Progress</h1>
-        <p>Sto lavorando alla nuova versione del mio portfolio per renderlo ancora migliore. Torna a trovarmi presto!</p>
-        
-        <a href="https://www.linkedin.com/in/TUO-PROFILO" class="contact-link" target="_blank">
-            Contattami su LinkedIn
-        </a>
+    <!-- Homepage Split Screen -->
+    <div id="homepage" class="split-screen active">
+        <div class="split-half academic-side" onclick="navigateTo('academic')">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="icon">🎓</div>
+                <h1>Academic Portfolio</h1>
+                <p>Research, Publications & Education</p>
+                <button class="explore-btn">Esplora →</button>
+            </div>
+        </div>
+        <div class="split-half datascience-side" onclick="navigateTo('datascience')">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="icon">📊</div>
+                <h1>Data Scientist Portfolio</h1>
+                <p>Projects, Skills & Analytics</p>
+                <button class="explore-btn">Esplora →</button>
+            </div>
+        </div>
     </div>
+
+    <!-- Academic Portfolio Section -->
+    <div id="academic-portfolio" class="portfolio-section">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo" onclick="navigateTo('home')">PS</div>
+                <ul class="nav-menu">
+                    <li><a href="#" onclick="showSection('academic-home')">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Academic ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" onclick="showSection('education')">Education</a></li>
+                            <li><a href="#" onclick="showSection('research')">Research</a></li>
+                            <li><a href="#" onclick="showSection('publications')">Publications</a></li>
+                            <li><a href="#" onclick="showSection('teaching')">Teaching</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" onclick="showSection('academic-about')">About</a></li>
+                    <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+                </ul>
+                <div class="nav-switch">
+                    <button onclick="navigateTo('datascience')" class="switch-btn">Data Science →</button>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="content-area">
+            <section id="academic-home" class="section-content active">
+                <div class="hero-section">
+                    <h1 class="fade-in">Academic Portfolio</h1>
+                    <p class="fade-in delay-1">Benvenuto nel mio portfolio accademico</p>
+                </div>
+            </section>
+            
+            <section id="education" class="section-content">
+                <h2>Education</h2>
+                <p>Contenuto della sezione Education - da personalizzare</p>
+            </section>
+            
+            <section id="research" class="section-content">
+                <h2>Research</h2>
+                <p>Contenuto della sezione Research - da personalizzare</p>
+            </section>
+            
+            <section id="publications" class="section-content">
+                <h2>Publications</h2>
+                <p>Contenuto della sezione Publications - da personalizzare</p>
+            </section>
+            
+            <section id="teaching" class="section-content">
+                <h2>Teaching</h2>
+                <p>Contenuto della sezione Teaching - da personalizzare</p>
+            </section>
+            
+            <section id="academic-about" class="section-content">
+                <h2>About Me</h2>
+                <p>Contenuto della sezione About - da personalizzare</p>
+            </section>
+        </div>
+    </div>
+
+    <!-- Data Science Portfolio Section -->
+    <div id="datascience-portfolio" class="portfolio-section">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo" onclick="navigateTo('home')">PS</div>
+                <ul class="nav-menu">
+                    <li><a href="#" onclick="showSection('ds-home')">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Data Science ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+                            <li><a href="#" onclick="showSection('skills')">Skills</a></li>
+                            <li><a href="#" onclick="showSection('tools')">Tools & Tech</a></li>
+                            <li><a href="#" onclick="showSection('certifications')">Certifications</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" onclick="showSection('ds-about')">About</a></li>
+                    <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+                </ul>
+                <div class="nav-switch">
+                    <button onclick="navigateTo('academic')" class="switch-btn">← Academic</button>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="content-area">
+            <section id="ds-home" class="section-content active">
+                <div class="hero-section">
+                    <h1 class="fade-in">Data Science Portfolio</h1>
+                    <p class="fade-in delay-1">Benvenuto nel mio portfolio Data Science</p>
+                </div>
+            </section>
+            
+            <section id="projects" class="section-content">
+                <h2>Projects</h2>
+                <p>Contenuto della sezione Projects - da personalizzare</p>
+            </section>
+            
+            <section id="skills" class="section-content">
+                <h2>Skills</h2>
+                <p>Contenuto della sezione Skills - da personalizzare</p>
+            </section>
+            
+            <section id="tools" class="section-content">
+                <h2>Tools & Technologies</h2>
+                <p>Contenuto della sezione Tools - da personalizzare</p>
+            </section>
+            
+            <section id="certifications" class="section-content">
+                <h2>Certifications</h2>
+                <p>Contenuto della sezione Certifications - da personalizzare</p>
+            </section>
+            
+            <section id="ds-about" class="section-content">
+                <h2>About Me</h2>
+                <p>Contenuto della sezione About - da personalizzare</p>
+            </section>
+        </div>
+    </div>
+
+    <!-- Contact Section (Shared) -->
+    <section id="contact" class="section-content contact-section">
+        <h2>Contact</h2>
+        <p>Email: tua@email.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/TUO-PROFILO" target="_blank">Il tuo profilo</a></p>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
