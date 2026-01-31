@@ -7,7 +7,7 @@
 
 :root {
     --academic-color: #2c3e50;
-    --academic-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --academic-gradient: linear-gradient(135deg, #111d52 0%, #764ba2 100%);
     --datascience-color: #1a73e8;
     --datascience-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
     --text-dark: #333;
