@@ -1,4 +1,4 @@
-![Image title 1](content/assets/your-image-1.jpg)
+![Image title 1](content/assets/academic.png)
 
 A short paragraph describing the first image.
 
