@@ -1,6 +1,6 @@
 ![Image title 1](content/assets/academic.png)
 
-A short paragraph describing the first image.
+Quindi se io scrivo un paragrafo descrittivo qui si dovrebbe sovrapporre all'immagine, ma forse e' meglio se ...
 
 ---
 
