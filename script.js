@@ -71,6 +71,9 @@ function showSection(sectionId) {
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize homepage
     navigateTo('home');
+
+    // Load markdown content for sections
+    loadMarkdownSections();
     
     // Add hover effects to split sections
     const splitHalves = document.querySelectorAll('.split-half');
@@ -94,6 +97,35 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Load markdown files into placeholders
+async function loadMarkdownSections() {
+    const mdBlocks = document.querySelectorAll('.md-content[data-md]');
+
+    for (const block of mdBlocks) {
+        const src = block.getAttribute('data-md');
+        if (!src) {
+            continue;
+        }
+
+        try {
+            const response = await fetch(src, { cache: 'no-store' });
+            if (!response.ok) {
+                throw new Error(`Failed to load ${src}`);
+            }
+
+            const markdown = await response.text();
+            if (window.marked) {
+                block.innerHTML = window.marked.parse(markdown);
+            } else {
+                block.textContent = markdown;
+            }
+        } catch (error) {
+            block.innerHTML = '<p>Content failed to load.</p>';
+            console.error(error);
+        }
+    }
+}
 
 // Add parallax effect on scroll
 window.addEventListener('scroll', () => {

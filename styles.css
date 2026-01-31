@@ -342,6 +342,33 @@ body {
     color: #555;
 }
 
+.md-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+.md-content ul,
+.md-content ol {
+    padding-left: 24px;
+    margin-bottom: 16px;
+}
+
+.md-content a {
+    color: var(--academic-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#datascience-portfolio .md-content a {
+    color: var(--datascience-color);
+}
+
+.md-content a:hover {
+    text-decoration: underline;
+}
+
 /* Contact Section */
 .contact-section {
     padding: 80px 40px;
