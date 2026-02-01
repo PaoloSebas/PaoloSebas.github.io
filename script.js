@@ -96,7 +96,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 menu.style.opacity = '0';
                 menu.style.visibility = 'hidden';
             });
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                dropdown.classList.remove('open');
+            });
         }
+    });
+
+    // Toggle dropdown on click (for touch devices)
+    document.querySelectorAll('.dropdown > .dropdown-toggle').forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            const dropdown = toggle.closest('.dropdown');
+            if (dropdown) {
+                dropdown.classList.toggle('open');
+            }
+        });
     });
 });
 

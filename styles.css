@@ -252,6 +252,12 @@ body {
     transform: translateY(0);
 }
 
+.dropdown.open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 .dropdown-menu li a {
     padding: 12px 25px;
     display: block;
