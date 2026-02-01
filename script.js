@@ -113,6 +113,27 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Mobile nav toggle
+    document.querySelectorAll('.nav-toggle').forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const menuId = toggle.getAttribute('aria-controls');
+            const menu = menuId ? document.getElementById(menuId) : null;
+            if (!menu) {
+                return;
+            }
+            const isOpen = menu.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', String(isOpen));
+        });
+    });
+
+    // Close mobile menu on item click
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.querySelectorAll('.nav-menu').forEach(menu => menu.classList.remove('open'));
+            document.querySelectorAll('.nav-toggle').forEach(toggle => toggle.setAttribute('aria-expanded', 'false'));
+        });
+    });
 });
 
 // Load markdown files into placeholders

@@ -179,6 +179,7 @@ body {
     align-items: center;
     padding: 0 50px;
     height: 70px;
+    gap: 16px;
 }
 
 .logo {
@@ -198,6 +199,18 @@ body {
     list-style: none;
     gap: 10px;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(15, 23, 42, 0.2);
+    color: var(--text-dark);
+    border-radius: 10px;
+    padding: 6px 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
 }
 
 .nav-menu > li > a {
@@ -362,6 +375,15 @@ body {
     margin-bottom: 16px;
 }
 
+.md-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
 .md-content ul,
 .md-content ol {
     padding-left: 24px;
@@ -479,6 +501,7 @@ body {
 @media (max-width: 768px) {
     .split-screen {
         flex-direction: column;
+        height: auto;
     }
     
     .split-half h1 {
@@ -490,16 +513,79 @@ body {
     }
     
     .nav-container {
-        padding: 0 20px;
+        padding: 10px 16px;
         flex-wrap: wrap;
+        height: auto;
     }
     
     .nav-menu {
         flex-direction: column;
         width: 100%;
+        align-items: flex-start;
+        gap: 6px;
+        padding: 10px 0 16px;
+        display: none;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .hero-section h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    .hero-section {
+        padding: 70px 16px 40px;
+    }
+
+    .hero-section p {
+        font-size: 1.1rem;
+    }
+
+    .content-area {
+        padding: 40px 16px;
+    }
+
+    .section-content h2 {
+        font-size: 2rem;
+    }
+
+    .switch-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-switch {
+        width: 100%;
+        display: flex;
+    }
+
+    .contact-section {
+        padding: 50px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .split-half {
+        min-height: 60vh;
+    }
+
+    .split-half .icon {
+        font-size: 3.5rem;
+    }
+
+    .explore-btn {
+        width: 100%;
+    }
+
+    .gallery-item {
+        margin: 20px 0;
     }
 }
