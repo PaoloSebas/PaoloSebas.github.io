@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 /* Reset and Variables */
 * {
     margin: 0;
@@ -6,19 +8,20 @@
 }
 
 :root {
-    --academic-color: #2c3e50;
-    --academic-gradient: linear-gradient(135deg, #111d52 0%, #764ba2 100%);
-    --datascience-color: #1a73e8;
-    --datascience-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --text-dark: #333;
-    --text-light: #fff;
-    --bg-light: #f8f9fa;
+    --academic-color: #0f2d3f;
+    --academic-gradient: linear-gradient(135deg, #0b1f2a 0%, #0f4c5c 50%, #1b6d7a 100%);
+    --datascience-color: #1e3a8a;
+    --datascience-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 45%, #2563eb 100%);
+    --text-dark: #0f172a;
+    --text-light: #f8fafc;
+    --bg-light: #f5f7fb;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
     color: var(--text-dark);
+    background: #ffffff;
 }
 
 /* Homepage Split Screen */
@@ -125,22 +128,24 @@ body {
 }
 
 .explore-btn {
-    padding: 15px 40px;
-    font-size: 1.1rem;
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid var(--text-light);
+    padding: 14px 36px;
+    font-size: 1rem;
+    letter-spacing: 0.2px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.35);
     color: var(--text-light);
     cursor: pointer;
-    border-radius: 50px;
+    border-radius: 999px;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
 }
 
 .explore-btn:hover {
-    background: var(--text-light);
+    background: rgba(255, 255, 255, 0.9);
     color: var(--text-dark);
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
 }
 
 /* Portfolio Sections */
@@ -274,24 +279,26 @@ body {
 
 /* Switch Button */
 .switch-btn {
-    padding: 10px 25px;
-    background: var(--academic-gradient);
-    color: white;
-    border: none;
-    border-radius: 25px;
+    padding: 10px 22px;
+    background: rgba(15, 76, 92, 0.12);
+    color: var(--academic-color);
+    border: 1px solid rgba(15, 76, 92, 0.25);
+    border-radius: 999px;
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .switch-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: rgba(15, 76, 92, 0.2);
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.12);
 }
 
 #datascience-portfolio .switch-btn {
-    background: var(--datascience-gradient);
+    background: rgba(37, 99, 235, 0.12);
+    color: var(--datascience-color);
+    border-color: rgba(37, 99, 235, 0.25);
 }
 
 /* Content Area */
