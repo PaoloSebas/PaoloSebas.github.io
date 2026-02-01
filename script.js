@@ -92,10 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Close dropdown when clicking outside
     document.addEventListener('click', (e) => {
         if (!e.target.closest('.dropdown')) {
-            document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                menu.style.opacity = '0';
-                menu.style.visibility = 'hidden';
-            });
             document.querySelectorAll('.dropdown').forEach(dropdown => {
                 dropdown.classList.remove('open');
             });
@@ -108,6 +104,11 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const dropdown = toggle.closest('.dropdown');
             if (dropdown) {
+                document.querySelectorAll('.dropdown').forEach(item => {
+                    if (item !== dropdown) {
+                        item.classList.remove('open');
+                    }
+                });
                 dropdown.classList.toggle('open');
             }
         });
