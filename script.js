@@ -124,6 +124,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             const isOpen = menu.classList.toggle('open');
             toggle.setAttribute('aria-expanded', String(isOpen));
+            if (!isOpen) {
+                document.querySelectorAll('.dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('open');
+                });
+            }
         });
     });
 
@@ -132,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             document.querySelectorAll('.nav-menu').forEach(menu => menu.classList.remove('open'));
             document.querySelectorAll('.nav-toggle').forEach(toggle => toggle.setAttribute('aria-expanded', 'false'));
+            document.querySelectorAll('.dropdown').forEach(dropdown => dropdown.classList.remove('open'));
         });
     });
 });
