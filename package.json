@@ -1,0 +1,24 @@
+{
+  "name": "paolosebas.github.io",
+  "version": "1.0.0",
+  "description": "This repository is a static site with Markdown-driven content. The HTML layout stays stable, while most text and images live in `.md` files under the `content/` folder. This keeps edits fast and scalable.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaoloSebas/PaoloSebas.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/PaoloSebas/PaoloSebas.github.io/issues"
+  },
+  "homepage": "https://github.com/PaoloSebas/PaoloSebas.github.io#readme",
+  "dependencies": {
+    "marked": "^17.0.2"
+  }
+}
