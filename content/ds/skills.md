@@ -211,7 +211,7 @@ Raw Data (5GB NetCDF)
 - Spatial correlation analysis
 
 **Achievement:**
-> Identified maximum SO₂ concentration location: Ingwe Local Municipality, South Africa (-30° lat, 30° lon)
+> Identified maximum SO₂ concentration location
 
 ---
 
