@@ -1,3 +1,5 @@
+I obtained my  HarvardX PH125.9x Data Science Professional Certificate with the following Capstone Project
+
 # GEOS-Chem Atmospheric Chemistry ML Project
 
 ## 🌍 Project Overview
