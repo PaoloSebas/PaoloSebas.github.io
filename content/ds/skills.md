@@ -185,7 +185,7 @@ Raw Data (5GB NetCDF)
 
 ### Environmental & Atmospheric Sciences
 
-#### **Chemistry Transport Models (CTMs)** ![Intermediate](https://img.shields.io/badge/Level-Intermediate-yellow)
+#### **Chemistry Transport Models (CTMs)** ![Intermediate](https://img.shields.io/badge/Level-Advanced-green)
 
 **Knowledge Areas:**
 - GEOS-Chem model architecture
