@@ -1,5 +1,4 @@
-Welcome! My journey in the academic life starts in 2003
-Work in progress
+Welcome! Take a look to my academic journey.
 
 
 ![Career scheme](content/assets/Career.png)
