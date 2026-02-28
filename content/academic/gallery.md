@@ -6,7 +6,7 @@ Following my graduation, I worked as a Sales Representative for a pharmaceutical
 
 ---
 
-<img src="content/Images/Gemini_Logo2.png" alt="Hi there!" width="250" height="auto">
+<img src="Images/Gemini_Logo2.png" alt="Hi there!" width="250" height="auto">
 
 Work in progress
 ---
