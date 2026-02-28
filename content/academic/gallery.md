@@ -16,5 +16,5 @@ This wonderful quote is from my mentor, Professor Giovanni Camino. In 2008, I ha
 
 If you are interested in what I think teaching means, you can explore my <a href="#" onclick="showSection('teaching'); return false;">Teaching Philosophy</a>. Instead, if you are interested in my teaching previous employments, you go to <a href="#teaching-employments" onclick="showSection('teaching'); return true;">Teaching Employments</a>.
 
-Work in progress
+
 ---
