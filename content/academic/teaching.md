@@ -1,6 +1,6 @@
 <div id="teaching-philosophy"></div>
 
-**Teaching Philosphy**
+**Teaching Philosophy**
 
 My teaching philosophy is fundamentally rooted in the conviction that education is a social practice with a central goal: to foster the growth of critical and socially responsible individuals. I teach because instruction is not a detached intellectual exercise; it is an act that recognizes that "we are part of a society."
 
