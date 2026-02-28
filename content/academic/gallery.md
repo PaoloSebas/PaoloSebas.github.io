@@ -12,7 +12,7 @@ This wonderful quote is from my mentor, Professor Giovanni Camino. In 2008, I ha
 "If you can't explain it simply, you don't understand it well enough." A.E
 ---
 
-![Image title 3](content/assets/your-image-3.jpg)
+<img src="Images/agro.png" alt="Hi there!" width="150" height="auto">
 
 Work in progress
 ---
