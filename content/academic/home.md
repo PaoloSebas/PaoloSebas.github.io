@@ -1,4 +1,4 @@
-Welcome! Take a look to my academic journey.
+Welcome! Take a look at my academic journey.
 ---
 
 
