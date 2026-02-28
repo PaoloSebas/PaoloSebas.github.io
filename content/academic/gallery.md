@@ -14,7 +14,7 @@ This wonderful quote is from my mentor, Professor Giovanni Camino. In 2008, I ha
 
 <img src="Images/agro.png" alt="Hi there!" width="150" height="auto">
 
-If you are interested in what I think teaching means, you can explore my <a href="#" onclick="showSection('teaching'); return false;">Teaching Philosophy</a>. If you are interested in my previous teaching employments, you can explore my <a href="#" onclick="showSection('teaching'); return false;">Teaching Employments</a>.
+If you are interested in what I think teaching means, you can explore my <a href="#" onclick="showSection('teaching'); setTimeout(() => document.getElementById('teaching-philosophy')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120); return false;">Teaching Philosophy</a>. If you are interested in my previous teaching employments, you can explore my <a href="#" onclick="showSection('teaching'); setTimeout(() => document.getElementById('teaching-employments')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120); return false;">Teaching Employments</a>.
 
 
 ---

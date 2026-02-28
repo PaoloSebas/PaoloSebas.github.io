@@ -1,3 +1,5 @@
+<div id="teaching-philosophy"></div>
+
 **Teaching Philosphy**
 
 My teaching philosophy is fundamentally rooted in the conviction that education is a social practice with a central goal: to foster the growth of critical and socially responsible individuals. I teach because instruction is not a detached intellectual exercise; it is an act that recognizes that "we are part of a society."
@@ -17,6 +19,8 @@ Finally, I commit to continuous improvement through a constant cycle of critical
 I spent more than three years at the National University of La Pampa (UNLPam) as a Subject Coordinator, a Lecturer, and an Associate Lecturer in different subjects: General Chemistry, Physical Chemistry, Electromagnetism, General Physics, Mathemathics. It was a challenging and enriching time, in another country delivering concepts in another language ... and if you are and educator, you know what I mean.
 
 ---
+
+<div id="teaching-employments"></div>
 
 ## Teaching Employments
 
