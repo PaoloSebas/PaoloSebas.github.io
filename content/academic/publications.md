@@ -1,5 +1,3 @@
-## Publications
-
 ### Refereed
 
 1. Nelson, M., Sebastianelli, P., *Ignite your students' interest in separable ODEs: a fire engineering application*. International Journal of Mathematical Education in Science and Technology. 1-22. [https://doi.org/10.1080/0020739X.2025.2471439](https://doi.org/10.1080/0020739X.2025.2471439), 2025

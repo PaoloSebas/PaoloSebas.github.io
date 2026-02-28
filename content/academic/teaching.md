@@ -14,4 +14,48 @@ Finally, I commit to continuous improvement through a constant cycle of critical
 
 **International Experience** 
 
-I spent more than three years at the National University of La Pampa (UNLPam) as a Subject Coordinator, a Lecturer, and an Associate Lecturer in different subjects: General Chemistry, Physical Chemistry, Electromagnetism, General Physics, Mathemathics. It was a challenging and enriching time, in another country delivering concepts in another language ... and if you are and educator, you know what I mean. 
+I spent more than three years at the National University of La Pampa (UNLPam) as a Subject Coordinator, a Lecturer, and an Associate Lecturer in different subjects: General Chemistry, Physical Chemistry, Electromagnetism, General Physics, Mathemathics. It was a challenging and enriching time, in another country delivering concepts in another language ... and if you are and educator, you know what I mean.
+
+---
+
+## Teaching Employments
+
+### University of Wollongong (UOW) - Australia
+
+- **Lecturer** in Introduction to Environmental Physics (PHYS233) - *2025*
+- **Lab Demonstrator** in General Chemistry (CHEM103) - *2020, 2025*
+- **Lab Demonstrator** in General Chemistry (CHEM101) - *2025*
+- **Tutor** in Introduction to Environmental Physics (PHYS233) - *2024*
+
+### University of La Pampa (UNLPam) - Argentina
+*2014-2019*
+
+**Faculty of Exact and Natural Sciences**
+
+*Department of Chemistry*
+- **Subject Coordinator:** Physical Chemistry 1
+- **Associate Lecturer:** Physical Chemistry 2
+- **Associate Lecturer:** General Chemistry (Large cohort of students)
+
+*Department of Physics*
+- **Associate Lecturer:** Physics 3
+- **Practicum Coordinator:** Physics 2
+
+*Diploma in Hydrocarbon*
+- **Subject Coordinator:** Physics 2
+- **Practicum Coordinator:** Physics 1
+- **Practicum Coordinator:** General and Inorganic Chemistry
+
+**Faculty of Agronomy**
+
+*Agricultural Engineering degree*
+- **Associate Lecturer:** General Chemistry (Large cohort of students)
+
+### Universidad Tecnológica Nacional (UTN), Trenque Lauquen - Argentina
+
+- **Subject Coordinator:** Agricultural Phenology and Climatology - *2017*
+
+### Secondary School, Various Schools of Santa Rosa City - La Pampa, Argentina
+
+- **Teacher** - *2014-2017*
+  - Subjects: Chemistry, Physical Chemistry, Technology Education, Materials for Automotive Technician 
