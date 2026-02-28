@@ -1,6 +1,6 @@
 ![Image title 1](content/assets/academic.png)
 
-Work in progress
+I got my degree in Chemistry, with specialization in Materials, in 2003 at the Univerisity of Rome Tor Vergata. Great experience. Student number 221. They were the day when UTV was building the future. Today UTV is a great reality. [Take a look to their webpage HERE](https://scienze.uniroma2.it/)
 
 ---
 
