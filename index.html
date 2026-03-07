@@ -36,18 +36,18 @@
                 <div class="logo" onclick="navigateTo('home')">PS</div>
                 <button class="nav-toggle" aria-expanded="false" aria-controls="academic-nav-menu">☰</button>
                 <ul id="academic-nav-menu" class="nav-menu">
-                    <li><a href="#" onclick="showSection('academic-home')">Home</a></li>
+                    <li><a href="#" onclick="showSection('academic-home', event)">Home</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle">Academic ▼</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#" onclick="showSection('education')">Education</a></li>
-                            <li><a href="#" onclick="showSection('research')">Research</a></li>
-                            <li><a href="#" onclick="showSection('publications')">Publications</a></li>
-                            <li><a href="#" onclick="showSection('teaching')">Teaching</a></li>
+                            <li><a href="#" onclick="showSection('education', event)">Education</a></li>
+                            <li><a href="#" onclick="showSection('research', event)">Research</a></li>
+                            <li><a href="#" onclick="showSection('publications', event)">Publications</a></li>
+                            <li><a href="#" onclick="showSection('teaching', event)">Teaching</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" onclick="showSection('academic-about')">About</a></li>
-                    <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+                    <li><a href="#" onclick="showSection('academic-about', event)">About</a></li>
+                    <li><a href="#" onclick="showSection('contact', event)">Contact</a></li>
                 </ul>
                 <div class="nav-switch">
                     <button onclick="navigateTo('datascience')" class="switch-btn">Data Science →</button>
@@ -98,18 +98,18 @@
                 <div class="logo" onclick="navigateTo('home')">PS</div>
                 <button class="nav-toggle" aria-expanded="false" aria-controls="datascience-nav-menu">☰</button>
                 <ul id="datascience-nav-menu" class="nav-menu">
-                    <li><a href="#" onclick="showSection('ds-home')">Home</a></li>
+                    <li><a href="#" onclick="showSection('ds-home', event)">Home</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle">Data Science ▼</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#" onclick="showSection('projects')">Projects</a></li>
-                            <li><a href="#" onclick="showSection('skills')">Skills</a></li>
-                            <li><a href="#" onclick="showSection('tools')">Tools & Tech</a></li>
-                            <li><a href="#" onclick="showSection('certifications')">Certifications</a></li>
+                            <li><a href="#" onclick="showSection('projects', event)">Projects</a></li>
+                            <li><a href="#" onclick="showSection('skills', event)">Skills</a></li>
+                            <li><a href="#" onclick="showSection('tools', event)">Tools & Tech</a></li>
+                            <li><a href="#" onclick="showSection('certifications', event)">Certifications</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" onclick="showSection('ds-about')">About</a></li>
-                    <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+                    <li><a href="#" onclick="showSection('ds-about', event)">About</a></li>
+                    <li><a href="#" onclick="showSection('contact', event)">Contact</a></li>
                 </ul>
                 <div class="nav-switch">
                     <button onclick="navigateTo('academic')" class="switch-btn">← Academic</button>

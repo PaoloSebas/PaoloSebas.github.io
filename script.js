@@ -33,12 +33,12 @@ function navigateTo(view) {
         }, 100);
     }
     
-    // Scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Scroll to top with fallback for older browsers
+    smoothScrollToTop();
 }
 
 // Show specific section within a portfolio
-function showSection(sectionId) {
+function showSection(sectionId, e) {
     // Get all section contents
     const allSections = document.querySelectorAll('.section-content');
     
@@ -56,15 +56,24 @@ function showSection(sectionId) {
         // Scroll to content area
         const navbar = document.querySelector('.navbar');
         if (navbar) {
-            window.scrollTo({
-                top: navbar.offsetHeight,
-                behavior: 'smooth'
-            });
+            smoothScrollTo(navbar.offsetHeight);
         }
     }
     
     // Prevent default link behavior
-    event?.preventDefault();
+    e?.preventDefault();
+}
+
+function smoothScrollToTop() {
+    smoothScrollTo(0);
+}
+
+function smoothScrollTo(top) {
+    try {
+        window.scrollTo({ top, behavior: 'smooth' });
+    } catch {
+        window.scrollTo(0, top);
+    }
 }
 
 // Add smooth scrolling
@@ -102,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.dropdown > .dropdown-toggle').forEach(toggle => {
         toggle.addEventListener('click', (e) => {
             e.preventDefault();
+            e.stopPropagation();
             const dropdown = toggle.closest('.dropdown');
             if (dropdown) {
                 document.querySelectorAll('.dropdown').forEach(item => {
@@ -135,6 +145,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Close mobile menu on item click
     document.querySelectorAll('.nav-menu a').forEach(link => {
         link.addEventListener('click', () => {
+            if (link.classList.contains('dropdown-toggle')) {
+                return;
+            }
             document.querySelectorAll('.nav-menu').forEach(menu => menu.classList.remove('open'));
             document.querySelectorAll('.nav-toggle').forEach(toggle => toggle.setAttribute('aria-expanded', 'false'));
             document.querySelectorAll('.dropdown').forEach(dropdown => dropdown.classList.remove('open'));
@@ -198,6 +211,11 @@ function enhanceGalleries() {
     });
 
     const revealItems = document.querySelectorAll('.reveal-on-scroll');
+    if (!('IntersectionObserver' in window)) {
+        revealItems.forEach(item => item.classList.add('is-visible'));
+        return;
+    }
+
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
