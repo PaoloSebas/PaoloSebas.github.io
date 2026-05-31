@@ -8,6 +8,8 @@ My teaching philosophy is fundamentally rooted in the conviction that education 
 
 For me, effective teaching is a form of adaptive, real-time practice. It is a bidirectional process where the instructor serves as an expert facilitator, not merely a content transmitter. Therefore, effective learning means the active construction and interpretation of concepts, enabling students to move beyond simple memorization and develop intellectual humility—acknowledging that neither they nor I know everything, but that knowledge can be powerfully built through collaboration.
 
+<img src="Images/Firefly_Teaching2.png" alt="Hi there!" width="auto" height="auto">
+
 I structure learning as a collaboration defined by shared accountability. I utilize dialogue, reflection, and comparison to guide students towards interpreting complex concepts.
 
 What makes me unique as an educator is my commitment to pedagogical adaptability and psychological safety. My practice is grounded in the principle that everyone in the educational context (students, colleagues, and myself) are human beings with vulnerabilities, strengths, and a capacity for participation that varies daily. To address this variability and ensure inclusivity, I actively practice reflective teaching, monitoring non-verbal cues to immediately adjust my approach and delivery speed, thereby sustaining engagement and participation.
