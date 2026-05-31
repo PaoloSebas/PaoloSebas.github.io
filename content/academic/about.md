@@ -1,3 +1,5 @@
-I am an experienced educator specialising in General Chemistry, Physical Chemistry and Physics, with a proven track record of teaching across universities and secondary schools. My expertise spans diverse international and social contexts, including work in Italy, Argentina and Australia. I have taught students from ages 12 to adults. I have successfully progressed through roles from tutor and lab demonstrator to lecturer and subject coordinator.
+I’m a science educator passionate about helping students make sense of Chemistry and Physics.
 
-My background in Chemistry and Physics allowed me to explore various domains of the modern science, leveraging interdisciplinary approaches to elucidate processes in Environment and Earth Science, Atmospheric Physics, Computational Chemistry, Combustion, and Materials Science.
+Over the years, I’ve worked with learners from age 12 to university level, teaching in Italy, Argentina, and Australia. My career has grown from tutoring and lab demonstrations through to lecturing and coordinating subjects.
+
+I enjoy connecting different areas of science — from atmospheric physics to environmental systems — and showing how concepts come together in real-world contexts.

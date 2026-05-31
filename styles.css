@@ -131,7 +131,7 @@ body {
     padding: 14px 36px;
     font-size: 1rem;
     letter-spacing: 0.2px;
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(15, 45, 63, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.35);
     color: var(--text-light);
     cursor: pointer;
@@ -163,6 +163,7 @@ body {
 /* Navbar */
 .navbar {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.98));
+    background-color: #ffffff;
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     position: sticky;
