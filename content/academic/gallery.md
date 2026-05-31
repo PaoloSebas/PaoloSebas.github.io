@@ -1,6 +1,6 @@
 <img src="Images/C_inro.png" alt="Hi there!" width="150" height="auto">
 
-I earned a degree in Chemistry with a specialisation in Materials from the University of Rome [Tor Vergata](https://scienze.uniroma2.it/) in 2003.
+I earned a degree in Chemistry with a specialisation in Materials from the University of Rome [Tor Vergata](https://scienze.uniroma2.it/) in 2003, under the supervision of [Professor Maria Luisa Di Vona](https://lablime.uniroma2.it/staff-item/maria-luisa-di-vona/).
 After graduating, I worked as a sales representative in the pharmaceutical industry. While the role gave me valuable professional experience, it also made me realise that my real interest lay in Chemistry and Materials, which led me back to a research pathway.
 
 "You should be thankful that this scientific topic is a mess, otherwise we wouldn’t be here." G.Camino
