@@ -2,7 +2,7 @@
 
 **Teaching Philosophy**
 
-<img src="Images/Firefly_Teaching1.png" alt="Hi there!" width="150" height="auto">
+<img src="Images/Firefly_Teaching1.png" alt="Hi there!" width="auto" height="auto">
 
 My teaching philosophy is fundamentally rooted in the conviction that education is a social practice with a central goal: to foster the growth of critical and socially responsible individuals. I teach because instruction is not a detached intellectual exercise; it is an act that recognizes that "we are part of a society."
 
