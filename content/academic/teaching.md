@@ -14,6 +14,9 @@ I structure learning as a collaboration defined by shared accountability. I util
 
 What makes me unique as an educator is my commitment to pedagogical adaptability and psychological safety. My practice is grounded in the principle that everyone in the educational context (students, colleagues, and myself) are human beings with vulnerabilities, strengths, and a capacity for participation that varies daily. To address this variability and ensure inclusivity, I actively practice reflective teaching, monitoring non-verbal cues to immediately adjust my approach and delivery speed, thereby sustaining engagement and participation.
 
+<img src="Images/Firefly_Teaching3.png" alt="Hi there!" width="auto" height="auto">
+
+
 Regarding the classroom covenant, students can expect from me a learning environment built on equity, inclusion, and psychological safety. They can expect that I will not make distinctions based on background, culture, or orientation, and that I will support differentiated instruction, striving to identify the most efficient learning method for them as individuals. In return, I expect from students that they will be active, reflective partners in the educational journey—bringing intellectual curiosity and a willingness to engage in the collaborative process of knowledge construction.
 
 Finally, I commit to continuous improvement through a constant cycle of critical reflective practice. This is most evident in how I manage classroom communication: I deliberately ask, "Did I explain myself clearly? Do you think I explained it well?" rather than "Do you understand?". This practice ensures I treat any confusion as potential feedback on my delivery, guiding my continuous pedagogical refinement.
