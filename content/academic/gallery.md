@@ -8,7 +8,7 @@ After graduating, I worked as a sales representative in the pharmaceutical indus
 
 <img src="Images/Fuoco.jpg" alt="Hi there!" width="150" height="auto">
 
-This wonderful quote is from my mentor, Professor Giovanni Camino. In 2008, I had the privilege of completing a Master's degree in Polymer Science and Technology organized by Proplast, where Camino was one of the professors teaching polymer chemistry. Following the program, I joined his research group as Fire Lab Manager, where I gained extensive knowledge in polymer combustion.
+I owe this wonderful quote to my mentor, Professor Giovanni. Our paths first crossed back in 2008 during my Master’s program in Polymer Science and Technology with [Proplast](https://www.proplast.it/), where he taught polymer chemistry. That connection led me to join his research group as the Fire Lab Manager, a role where I truly immersed myself in—and mastered—the world of polymer combustion.
 
 "If you can't explain it simply, you don't understand it well enough." A.E.
 ---
