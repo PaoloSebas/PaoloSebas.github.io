@@ -1,4 +1,6 @@
 <div class="blog-shell academic-blog-shell">
+  <p class="template-warning">Template preview: placeholders for future articles</p>
+
   <div class="blog-hero">
     <p class="blog-eyebrow">Academic Writing Space</p>
     <h3 class="blog-title">Notes, reflections, and articles from teaching and research</h3>
@@ -7,19 +9,19 @@
 
   <div class="blog-grid">
     <article class="blog-card">
-      <p class="blog-card-meta">Coming soon</p>
+      <p class="blog-card-meta">Template · Coming soon</p>
       <h4><a href="#" onclick="showSection('academic-blog-article', event)">From Lab Concepts to Classroom Understanding</a></h4>
       <p>An article on transforming technical scientific concepts into accessible and rigorous learning pathways.</p>
     </article>
 
     <article class="blog-card">
-      <p class="blog-card-meta">Coming soon</p>
+      <p class="blog-card-meta">Template · Coming soon</p>
       <h4>Teaching Across Countries and Educational Cultures</h4>
       <p>A reflection on instructional adaptation, communication style, and student engagement in international contexts.</p>
     </article>
 
     <article class="blog-card">
-      <p class="blog-card-meta">Coming soon</p>
+      <p class="blog-card-meta">Template · Coming soon</p>
       <h4>Critical Thinking as an Educational Outcome</h4>
       <p>How dialogic teaching and reflective practice support scientific reasoning and social responsibility.</p>
     </article>

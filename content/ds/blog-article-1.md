@@ -1,8 +1,9 @@
 <div class="blog-article-shell">
   <p><a class="article-back-link" href="#" onclick="showSection('ds-blog', event)">← Back to Data Science Blog</a></p>
+  <p class="template-pill">Template Article</p>
 
   ## Designing Decision-Ready Dashboards
-  *Draft article template* · June 2026
+  *Template content (Lorem ipsum placeholder)* · June 2026
 
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consequat urna vel neque tincidunt, at luctus elit congue. Cras vel eros viverra, consectetur magna at, dapibus dui.
 

@@ -1,8 +1,9 @@
 <div class="blog-article-shell">
   <p><a class="article-back-link" href="#" onclick="showSection('academic-blog', event)">← Back to Academic Blog</a></p>
+  <p class="template-pill">Template Article</p>
 
   ## From Lab Concepts to Classroom Understanding
-  *Draft article template* · June 2026
+  *Template content (Lorem ipsum placeholder)* · June 2026
 
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor lorem non sem aliquet, sed bibendum risus laoreet. Curabitur efficitur magna vitae augue tincidunt, id luctus leo mattis. Integer ut augue et urna aliquet interdum in ac nibh.
 

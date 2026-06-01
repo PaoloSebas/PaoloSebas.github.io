@@ -605,6 +605,31 @@ body {
     text-align: center;
 }
 
+.template-warning {
+    margin: 0 0 12px;
+    padding: 8px 12px;
+    border: 1px dashed rgba(148, 163, 184, 0.6);
+    border-radius: 10px;
+    background: rgba(248, 250, 252, 0.85);
+    color: #64748b;
+    font-size: 0.88rem;
+    text-align: center;
+}
+
+.template-pill {
+    display: inline-block;
+    margin: 0 0 8px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+    background: rgba(241, 245, 249, 0.95);
+    color: #475569;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
 .blog-article-content {
     max-width: 900px;
 }
