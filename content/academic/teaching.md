@@ -6,13 +6,13 @@ My teaching philosophy is fundamentally rooted in the conviction that education 
 
 <img src="Images/G_Teaching1.png" alt="Hi there!" width="auto" height="auto">
 
-<p class="ai-credit">With the help of Gemini AI</p>
+<p class="ai-credit">Image: Gemini AI</p>
 
 For me, effective teaching is a form of adaptive, real-time practice. It is a bidirectional process where the instructor serves as an expert facilitator, not merely a content transmitter. Therefore, effective learning means the active construction and interpretation of concepts, enabling students to move beyond simple memorization and develop intellectual humility—acknowledging that neither they nor I know everything, but that knowledge can be powerfully built through collaboration.
 
 <img src="Images/G_Teaching2.png" alt="Hi there!" width="auto" height="auto">
 
-<p class="ai-credit">With the help of Gemini AI</p>
+<p class="ai-credit">Image: Gemini AI</p>
 
 I structure learning as a collaboration defined by shared accountability. I utilize dialogue, reflection, and comparison to guide students towards interpreting complex concepts.
 
@@ -20,21 +20,21 @@ What makes me unique as an educator is my commitment to pedagogical adaptability
 
 <img src="Images/G_Teaching3.png" alt="Hi there!" width="auto" height="auto">
 
-<p class="ai-credit">With the help of Gemini AI</p>
+<p class="ai-credit">Image: Gemini AI</p>
 
 
 Regarding the classroom covenant, students can expect from me a learning environment built on equity, inclusion, and psychological safety. They can expect that I will not make distinctions based on background, culture, or orientation, and that I will support differentiated instruction, striving to identify the most efficient learning method for them as individuals. In return, I expect from students that they will be active, reflective partners in the educational journey—bringing intellectual curiosity and a willingness to engage in the collaborative process of knowledge construction.
 
 <img src="Images/G_Teaching4.png" alt="Hi there!" width="auto" height="auto">
 
-<p class="ai-credit">With the help of Gemini AI</p>
+<p class="ai-credit">Image: Gemini AI</p>
 
 
 Finally, I commit to continuous improvement through a constant cycle of critical reflective practice. This is most evident in how I manage classroom communication: I deliberately ask, "Did I explain myself clearly? Do you think I explained it well?" rather than "Do you understand?". This practice ensures I treat any confusion as potential feedback on my delivery, guiding my continuous pedagogical refinement.
 
 <img src="Images/G_Teaching5.png" alt="Hi there!" width="auto" height="auto">
 
-<p class="ai-credit">With the help of Gemini AI</p>
+<p class="ai-credit">Image: Gemini AI</p>
 
 
 <h3 class="teaching-label">International Experience</h3>
@@ -49,7 +49,7 @@ I spent more than three years at the National University of La Pampa (UNLPam) as
 
 <img src="Images/G_Teaching6.png" alt="Hi there!" width="auto" height="auto">
 
-<p class="ai-credit">With the help of Gemini AI</p>
+<p class="ai-credit">Image: Gemini AI</p>
 
 
 ### University of Wollongong (UOW) - Australia
