@@ -122,19 +122,7 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo" onclick="navigateTo('home')">Dr. Paolo Sebastianelli</div>
-                <button class="nav-toggle" aria-expanded="false" aria-controls="datascience-nav-menu">☰</button>
-                <ul id="datascience-nav-menu" class="nav-menu">
-                    <li><a href="#" onclick="showSection('ds-home', event)">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle">Data Science ▼</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#" onclick="showSection('projects', event)">Projects</a></li>
-                            <li><a href="#" onclick="showSection('skills', event)">Skills</a></li>
-                            <li><a href="#" onclick="showSection('tools', event)">Tools & Tech</a></li>
-                            <li><a href="#" onclick="showSection('certifications', event)">Certifications</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" onclick="showSection('ds-about', event)">About</a></li>
+                <ul class="nav-menu">
                     <li><a href="#" onclick="showSection('contact', event)">Contact</a></li>
                 </ul>
                 <div class="nav-switch">
@@ -143,6 +131,23 @@
             </div>
         </nav>
         
+        <!-- DS Video Hero -->
+        <div class="ds-video-hero">
+            <video
+                class="ds-hero-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="videos/hero-loop-poster.png"
+            >
+                <source src="videos/hero-loop-mobile.mp4" type="video/mp4" media="(max-width: 768px) and (orientation: portrait)">
+                <source src="videos/hero-loop.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!--
         <div class="content-area">
             <section id="ds-home" class="section-content active">
                 <div class="hero-section">
@@ -177,6 +182,7 @@
                 <div class="md-content" data-md="content/ds/about.md"></div>
             </section>
         </div>
+        -->
     </div>
 
     <!-- Contact Section (Shared) -->
