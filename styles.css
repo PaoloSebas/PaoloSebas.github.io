@@ -28,6 +28,7 @@ body {
 .split-screen {
     display: none;
     height: 100vh;
+    height: 100dvh;
     width: 100%;
 }
 
@@ -125,6 +126,7 @@ body {
 .portfolio-section {
     display: none;
     min-height: 100vh;
+        min-height: 100dvh;
     opacity: 0;
     animation: fadeIn 0.5s ease forwards;
 }
@@ -138,6 +140,7 @@ body {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.98));
     background-color: #ffffff;
     backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -871,6 +874,7 @@ body {
     position: relative;
     width: 100%;
     height: calc(100vh - 70px);
+        height: calc(100dvh - 70px);
     overflow: hidden;
     background: #ffffff;
     display: flex;
@@ -962,4 +966,8 @@ body {
 
 @media (max-width: 768px) {
     .ds-video-hero { height: calc(100vh - 60px); }
+        .ds-video-hero {
+            height: calc(100vh - 60px);
+            height: calc(100dvh - 60px);
+        }
 }
