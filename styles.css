@@ -310,6 +310,14 @@ body {
     white-space: nowrap;
     will-change: transform;
     animation: ds-marquee 26s linear infinite;
+    animation-play-state: paused;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.ds-announcement-track.is-ready {
+    animation-play-state: running;
+    opacity: 1;
 }
 
 .ds-announcement-track span {

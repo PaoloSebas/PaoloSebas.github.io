@@ -201,6 +201,13 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         dsAnnouncementTrack.style.setProperty('--ds-marquee-distance', `${Math.ceil(messageWidth + gapValue)}px`);
+
+        // Restart marquee after each valid measurement to avoid first-paint glitches.
+        dsAnnouncementTrack.classList.remove('is-ready');
+        dsAnnouncementTrack.style.animation = 'none';
+        void dsAnnouncementTrack.offsetWidth;
+        dsAnnouncementTrack.style.animation = '';
+        dsAnnouncementTrack.classList.add('is-ready');
     }
 
     scheduleDsAnnouncementDistanceUpdate();
@@ -208,10 +215,16 @@ document.addEventListener('DOMContentLoaded', () => {
         scheduleDsAnnouncementDistanceUpdate();
     }, { passive: true });
 
+    if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', scheduleDsAnnouncementDistanceUpdate, { passive: true });
+    }
+
     if (dsPortfolio) {
         const dsVisibilityObserver = new MutationObserver(() => {
             if (dsPortfolio.classList.contains('active')) {
                 scheduleDsAnnouncementDistanceUpdate();
+                // Extra delayed pass for first paint on some mobile browsers.
+                window.setTimeout(scheduleDsAnnouncementDistanceUpdate, 220);
             }
         });
 
