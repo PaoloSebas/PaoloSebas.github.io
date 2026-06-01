@@ -386,15 +386,21 @@ body {
 }
 
 #teaching .md-content .teaching-label {
-    margin: 28px 0 18px;
-    font-size: 1.35rem;
-    font-weight: 800;
+    margin: 32px 0 16px;
+    padding-left: 12px;
+    border-left: 4px solid var(--academic-color);
+    font-size: 1.5rem;
+    font-weight: 700;
     color: var(--text-dark);
 }
 
-#teaching .md-content img {
+#teaching .md-content .teaching-media {
+    margin: 48px 0;
+}
+
+#teaching .md-content .teaching-media img {
     max-width: 90%;
-    margin: 44px auto 40px;
+    margin: 0 auto;
 }
 
 .md-content ul,

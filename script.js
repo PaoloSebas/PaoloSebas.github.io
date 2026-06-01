@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load markdown content for sections
     loadMarkdownSections().then(() => {
         enhanceGalleries();
+        enhanceTeachingContent();
     });
     
     // Add hover effects to split sections
@@ -226,6 +227,26 @@ function enhanceGalleries() {
     }, { threshold: 0.2 });
 
     revealItems.forEach(item => revealObserver.observe(item));
+}
+
+function enhanceTeachingContent() {
+    const teachingContent = document.querySelector('#teaching .md-content');
+    if (!teachingContent) {
+        return;
+    }
+
+    const images = Array.from(teachingContent.querySelectorAll('img'));
+
+    images.forEach(img => {
+        if (img.parentElement?.classList.contains('teaching-media')) {
+            return;
+        }
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'teaching-media';
+        img.parentNode.insertBefore(wrapper, img);
+        wrapper.appendChild(img);
+    });
 }
 
 // Add parallax effect on scroll
