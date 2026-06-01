@@ -494,6 +494,114 @@ body {
     color: #92400e;
 }
 
+/* Blog sections */
+.blog-content {
+    max-width: 1120px;
+}
+
+.blog-shell {
+    margin-top: 8px;
+}
+
+.blog-hero {
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    border-radius: 18px;
+    padding: 24px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.academic-blog-shell .blog-hero {
+    border-color: rgba(15, 45, 63, 0.2);
+    background: linear-gradient(135deg, #ffffff 0%, #f8f4ed 100%);
+}
+
+.ds-blog-shell .blog-hero {
+    border-color: rgba(30, 58, 138, 0.22);
+    background: linear-gradient(135deg, #ffffff 0%, #eef3ff 100%);
+}
+
+.blog-eyebrow {
+    margin: 0 0 8px;
+    font-size: 0.76rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #64748b;
+}
+
+.blog-title {
+    margin: 0;
+    font-size: clamp(1.3rem, 2.6vw, 2rem);
+    line-height: 1.28;
+    color: var(--text-dark);
+}
+
+.blog-subtitle {
+    margin: 10px 0 0;
+    font-size: 1.02rem;
+    color: #475569;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 18px;
+}
+
+.blog-card {
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    border-radius: 14px;
+    padding: 18px;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
+}
+
+.academic-blog-shell .blog-card {
+    border-color: rgba(15, 45, 63, 0.15);
+}
+
+.ds-blog-shell .blog-card {
+    border-color: rgba(30, 58, 138, 0.18);
+}
+
+.blog-card-meta {
+    margin: 0 0 8px;
+    font-size: 0.76rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #94a3b8;
+    font-weight: 700;
+}
+
+.blog-card h4 {
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+    line-height: 1.35;
+    color: var(--text-dark);
+}
+
+.blog-card p {
+    margin: 0;
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: #475569;
+}
+
+.blog-note {
+    margin-top: 16px;
+    font-size: 0.95rem;
+    color: #94a3b8;
+    text-align: center;
+}
+
 /* Academic gallery */
 .md-gallery {
     max-width: 1000px;
@@ -715,6 +823,15 @@ body {
 
     .section-content h2 {
         font-size: 2rem;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-hero,
+    .blog-card {
+        padding: 16px;
     }
 
     .switch-btn {
