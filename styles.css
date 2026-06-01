@@ -709,12 +709,9 @@ body {
     justify-content: center;
     width: 100%;
     height: 100%;
-    transform-style: preserve-3d;
     transform: rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)) translate3d(var(--move-x, 0px), var(--move-y, 0px), 0);
     transition: transform 180ms ease-out;
     will-change: transform;
-    overflow: hidden;
-    isolation: isolate;
     background: #ffffff;
     animation: ds-fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
 }
