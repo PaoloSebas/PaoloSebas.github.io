@@ -345,7 +345,7 @@ function enhanceTeachingContent() {
 }
 
 // Add parallax effect on scroll (optimized to avoid jank on initial scroll)
-const heroSections = Array.from(document.querySelectorAll('.hero-section'));
+let academicHeroSection = null;
 let cachedAcademicHeroImage = null;
 let isScrollTicking = false;
 
@@ -358,11 +358,15 @@ function applyScrollEffects() {
     }
 
     const scrolled = window.pageYOffset || window.scrollY || 0;
-    const parallaxOffset = scrolled * 0.18;
+    const parallaxOffset = Math.round(scrolled * 0.14);
 
-    heroSections.forEach((element) => {
-        element.style.transform = `translate3d(0, ${parallaxOffset.toFixed(2)}px, 0)`;
-    });
+    if (!academicHeroSection) {
+        academicHeroSection = document.querySelector('#academic-home .hero-section');
+    }
+
+    if (academicHeroSection) {
+        academicHeroSection.style.transform = `translateY(${parallaxOffset}px)`;
+    }
 
     // Fade out academic hero image on scroll.
     if (!cachedAcademicHeroImage) {
