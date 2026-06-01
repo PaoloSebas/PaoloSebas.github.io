@@ -8,7 +8,7 @@
   <div class="blog-grid">
     <article class="blog-card">
       <p class="blog-card-meta">Coming soon</p>
-      <h4>From Lab Concepts to Classroom Understanding</h4>
+      <h4><a href="#" onclick="showSection('academic-blog-article', event)">From Lab Concepts to Classroom Understanding</a></h4>
       <p>An article on transforming technical scientific concepts into accessible and rigorous learning pathways.</p>
     </article>
 

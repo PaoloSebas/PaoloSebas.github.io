@@ -170,7 +170,7 @@ body {
 }
 
 .logo:hover {
-    transform: scale(1.1);
+    transform: none;
 }
 
 .nav-menu {
@@ -563,7 +563,7 @@ body {
 }
 
 .blog-card:hover {
-    transform: translateY(-3px);
+    transform: none;
     box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
 }
 
@@ -603,6 +603,36 @@ body {
     font-size: 0.95rem;
     color: #94a3b8;
     text-align: center;
+}
+
+.blog-article-content {
+    max-width: 900px;
+}
+
+.blog-article-shell {
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    background: #ffffff;
+    box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+}
+
+#datascience-portfolio .blog-article-shell {
+    border-color: rgba(30, 58, 138, 0.16);
+    background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+}
+
+.article-back-link {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 0.92rem;
+    color: #64748b;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.article-back-link:hover {
+    text-decoration: underline;
 }
 
 /* Academic gallery */

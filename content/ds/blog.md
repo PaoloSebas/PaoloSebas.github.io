@@ -8,7 +8,7 @@
   <div class="blog-grid">
     <article class="blog-card">
       <p class="blog-card-meta">Coming soon</p>
-      <h4>Designing Decision-Ready Dashboards</h4>
+      <h4><a href="#" onclick="showSection('ds-blog-article', event)">Designing Decision-Ready Dashboards</a></h4>
       <p>A practical framework for moving from KPI overload to action-oriented reporting for leadership teams.</p>
     </article>
 
