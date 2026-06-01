@@ -1,12 +1,77 @@
 // Navigation State Management
 let currentView = 'home'; // 'home', 'academic', 'datascience'
 let currentSection = '';
+const NAV_STATE_KEY = 'ps_portfolio_nav_state';
+
+const VIEW_SECTIONS = {
+    academic: new Set(['academic-home', 'education', 'research', 'publications', 'teaching', 'academic-about', 'contact']),
+    datascience: new Set(['ds-home', 'projects', 'skills', 'tools', 'certifications', 'ds-about', 'contact'])
+};
+
+function getDefaultSectionForView(view) {
+    if (view === 'academic') {
+        return 'academic-home';
+    }
+    if (view === 'datascience') {
+        return 'ds-home';
+    }
+    return '';
+}
+
+function canSectionBelongToView(sectionId, view) {
+    if (!sectionId) {
+        return false;
+    }
+    if (sectionId === 'contact') {
+        return true;
+    }
+    return VIEW_SECTIONS[view]?.has(sectionId) ?? false;
+}
+
+function saveNavigationState() {
+    try {
+        const state = {
+            view: currentView,
+            section: currentSection
+        };
+        localStorage.setItem(NAV_STATE_KEY, JSON.stringify(state));
+    } catch {
+        // Ignore storage errors (e.g., disabled storage).
+    }
+}
+
+function getSavedNavigationState() {
+    try {
+        const rawState = localStorage.getItem(NAV_STATE_KEY);
+        if (!rawState) {
+            return null;
+        }
+
+        const state = JSON.parse(rawState);
+        const isValidView = state?.view === 'home' || state?.view === 'academic' || state?.view === 'datascience';
+        if (!isValidView) {
+            return null;
+        }
+
+        const section = typeof state?.section === 'string' ? state.section : '';
+        return {
+            view: state.view,
+            section
+        };
+    } catch {
+        return null;
+    }
+}
 
 // Navigate between main views
-function navigateTo(view) {
+function navigateTo(view, targetSection = '', options = {}) {
+    const { persistState = true, smoothScroll = true } = options;
     const homepage = document.getElementById('homepage');
     const academicPortfolio = document.getElementById('academic-portfolio');
     const datasciencePortfolio = document.getElementById('datascience-portfolio');
+    const sectionToShow = canSectionBelongToView(targetSection, view)
+        ? targetSection
+        : getDefaultSectionForView(view);
     
     // Remove active class from all
     homepage.classList.remove('active');
@@ -16,6 +81,7 @@ function navigateTo(view) {
     // Add fade out effect
     if (view === 'home') {
         currentView = 'home';
+        currentSection = '';
         setTimeout(() => {
             homepage.classList.add('active');
         }, 100);
@@ -23,22 +89,29 @@ function navigateTo(view) {
         currentView = 'academic';
         setTimeout(() => {
             academicPortfolio.classList.add('active');
-            showSection('academic-home');
+            showSection(sectionToShow, undefined, { persistState: false, smoothScroll });
         }, 100);
     } else if (view === 'datascience') {
         currentView = 'datascience';
         setTimeout(() => {
             datasciencePortfolio.classList.add('active');
-            showSection('ds-home');
+            showSection(sectionToShow, undefined, { persistState: false, smoothScroll });
         }, 100);
+    }
+
+    if (persistState) {
+        saveNavigationState();
     }
     
     // Scroll to top with fallback for older browsers
-    smoothScrollToTop();
+    if (smoothScroll) {
+        smoothScrollToTop();
+    }
 }
 
 // Show specific section within a portfolio
-function showSection(sectionId, e) {
+function showSection(sectionId, e, options = {}) {
+    const { persistState = true, smoothScroll = true } = options;
     // Get all section contents
     const allSections = document.querySelectorAll('.section-content');
     
@@ -52,11 +125,21 @@ function showSection(sectionId, e) {
     if (targetSection) {
         targetSection.classList.add('active');
         currentSection = sectionId;
+        const sectionView = sectionId.startsWith('ds-') || VIEW_SECTIONS.datascience.has(sectionId)
+            ? 'datascience'
+            : 'academic';
+        if (sectionId !== 'contact') {
+            currentView = sectionView;
+        }
         
         // Scroll to content area
         const navbar = document.querySelector('.navbar');
-        if (navbar) {
+        if (navbar && smoothScroll) {
             smoothScrollTo(navbar.offsetHeight);
+        }
+
+        if (persistState) {
+            saveNavigationState();
         }
     }
     
@@ -78,8 +161,12 @@ function smoothScrollTo(top) {
 
 // Add smooth scrolling
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize homepage
-    navigateTo('home');
+    const savedState = getSavedNavigationState();
+    const initialView = savedState?.view ?? 'home';
+    const initialSection = savedState?.section ?? '';
+
+    // Restore last visited page on refresh
+    navigateTo(initialView, initialSection, { persistState: false, smoothScroll: false });
 
     // Load markdown content for sections
     loadMarkdownSections().then(() => {
