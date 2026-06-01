@@ -133,11 +133,14 @@ function showSection(sectionId, e, options = {}) {
         }
         
         // Scroll to content area
-        const navbar = document.querySelector('.navbar');
+        const navbar = document.querySelector('.portfolio-section.active .navbar');
         if (smoothScroll) {
             const navbarOffset = navbar ? navbar.offsetHeight : 0;
+            const scrollAnchor = sectionId === 'contact'
+                ? targetSection.querySelector('h2') || targetSection
+                : targetSection;
             const targetTop = Math.max(
-                targetSection.getBoundingClientRect().top + window.pageYOffset - navbarOffset - 16,
+                scrollAnchor.getBoundingClientRect().top + window.pageYOffset - navbarOffset - 12,
                 0
             );
             smoothScrollTo(targetTop);
