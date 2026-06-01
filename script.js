@@ -344,25 +344,46 @@ function enhanceTeachingContent() {
     });
 }
 
-// Add parallax effect on scroll
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const parallaxElements = document.querySelectorAll('.hero-section');
-    
-    parallaxElements.forEach(element => {
-        const speed = 0.8;
-        element.style.transform = `translateY(${scrolled * speed}px)`;
+// Add parallax effect on scroll (optimized to avoid jank on initial scroll)
+const heroSections = Array.from(document.querySelectorAll('.hero-section'));
+let cachedAcademicHeroImage = null;
+let isScrollTicking = false;
+
+function applyScrollEffects() {
+    isScrollTicking = false;
+
+    // Keep scroll effects lightweight and only while viewing academic sections.
+    if (currentView !== 'academic') {
+        return;
+    }
+
+    const scrolled = window.pageYOffset || window.scrollY || 0;
+    const parallaxOffset = scrolled * 0.18;
+
+    heroSections.forEach((element) => {
+        element.style.transform = `translate3d(0, ${parallaxOffset.toFixed(2)}px, 0)`;
     });
 
-    // Fade out academic hero image on scroll
-    const academicHeroImage = document.querySelector('#academic-home .hero-section .md-content img');
-    if (academicHeroImage) {
+    // Fade out academic hero image on scroll.
+    if (!cachedAcademicHeroImage) {
+        cachedAcademicHeroImage = document.querySelector('#academic-home .hero-section .md-content img');
+    }
+
+    if (cachedAcademicHeroImage) {
         const fadeStart = 0;
         const fadeEnd = 300;
         const progress = Math.min(Math.max((scrolled - fadeStart) / (fadeEnd - fadeStart), 0), 1);
-        academicHeroImage.style.opacity = `${1 - progress}`;
+        cachedAcademicHeroImage.style.opacity = `${1 - progress}`;
     }
-});
+}
+
+window.addEventListener('scroll', () => {
+    if (isScrollTicking) {
+        return;
+    }
+    isScrollTicking = true;
+    window.requestAnimationFrame(applyScrollEffects);
+}, { passive: true });
 
 // Prevent dropdown menu from closing when clicking inside
 document.querySelectorAll('.dropdown-menu').forEach(menu => {
