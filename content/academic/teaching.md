@@ -37,6 +37,9 @@ I spent more than three years at the National University of La Pampa (UNLPam) as
 
 ## Teaching History
 
+<img src="Images/G_Teaching6.png" alt="Hi there!" width="auto" height="auto">
+
+
 ### University of Wollongong (UOW) - Australia
 
 - **Lecturer** in Introduction to Environmental Physics (PHYS233) - *2025*
