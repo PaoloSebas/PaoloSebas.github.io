@@ -389,6 +389,13 @@ body {
     margin-bottom: 20px;
 }
 
+#teaching .md-content .teaching-label {
+    margin: 28px 0 16px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
 #teaching .md-content img {
     margin: 32px auto 28px;
 }
