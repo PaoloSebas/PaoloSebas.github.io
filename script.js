@@ -134,8 +134,13 @@ function showSection(sectionId, e, options = {}) {
         
         // Scroll to content area
         const navbar = document.querySelector('.navbar');
-        if (navbar && smoothScroll) {
-            smoothScrollTo(navbar.offsetHeight);
+        if (smoothScroll) {
+            const navbarOffset = navbar ? navbar.offsetHeight : 0;
+            const targetTop = Math.max(
+                targetSection.getBoundingClientRect().top + window.pageYOffset - navbarOffset - 16,
+                0
+            );
+            smoothScrollTo(targetTop);
         }
 
         if (persistState) {
