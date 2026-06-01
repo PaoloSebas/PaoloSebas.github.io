@@ -467,6 +467,23 @@ body {
     text-decoration: underline;
 }
 
+#academic-about .md-content .ai-credit,
+#education .md-content .ai-credit {
+    margin-top: 8px;
+    font-size: 0.86rem;
+    line-height: 1.4;
+    color: #94a3b8;
+    text-align: center;
+}
+
+.md-gallery .ai-credit-inline {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.82rem;
+    line-height: 1.35;
+    color: #94a3b8;
+}
+
 .md-content .supervisor-link {
     color: #b45309;
     font-weight: 700;

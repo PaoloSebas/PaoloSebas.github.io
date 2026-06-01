@@ -5,3 +5,5 @@ Over the years, I’ve worked with learners from age 12 to university level, tea
 I enjoy connecting different areas of science — from atmospheric physics to environmental systems — and showing how concepts come together in real-world contexts.
 
 <img src="Images/G_Academic_about.png" alt="Hi there!" width="auto" height="auto">
+
+<p class="ai-credit">With the help of Gemini AI</p>
