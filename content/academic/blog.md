@@ -11,21 +11,21 @@
 <article class="blog-card">
 <p class="blog-card-meta">Template · Coming soon</p>
 <h4><a href="#" onclick="showSection('academic-blog-article', event)">From Lab Concepts to Classroom Understanding</a></h4>
-<p>An article on transforming technical scientific concepts into accessible and rigorous learning pathways.</p>
+<p>...</p>
 </article>
 
 <article class="blog-card">
 <p class="blog-card-meta">Template · Coming soon</p>
 <h4>Teaching Across Countries and Educational Cultures</h4>
-<p>A reflection on instructional adaptation, communication style, and student engagement in international contexts.</p>
+<p>...</p>
 </article>
 
 <article class="blog-card">
 <p class="blog-card-meta">Template · Coming soon</p>
 <h4>Critical Thinking as an Educational Outcome</h4>
-<p>How dialogic teaching and reflective practice support scientific reasoning and social responsibility.</p>
+<p>...</p>
 </article>
 </div>
 
-  <p class="blog-note">You can replace these placeholders with your own article titles and content at any time.</p>
+  <p class="blog-note">Is there some specific topic that you want talk about?</p>
 </div>
