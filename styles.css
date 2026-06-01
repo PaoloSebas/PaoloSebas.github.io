@@ -426,6 +426,15 @@ body {
     text-decoration: underline;
 }
 
+.md-content .supervisor-link {
+    color: #b45309;
+    font-weight: 700;
+}
+
+.md-content .supervisor-link:hover {
+    color: #92400e;
+}
+
 /* Academic gallery */
 .md-gallery {
     max-width: 1000px;
