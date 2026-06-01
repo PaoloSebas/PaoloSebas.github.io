@@ -5,7 +5,7 @@ const NAV_STATE_KEY = 'ps_portfolio_nav_state';
 
 const VIEW_SECTIONS = {
     academic: new Set(['academic-home', 'education', 'research', 'publications', 'teaching', 'academic-about', 'contact']),
-    datascience: new Set(['ds-home', 'projects', 'skills', 'tools', 'certifications', 'ds-about', 'contact'])
+    datascience: new Set(['ds-home', 'projects', 'skills', 'tools', 'certifications', 'ds-about', 'contact', 'ds-contact', 'euchresisdata'])
 };
 
 function getDefaultSectionForView(view) {

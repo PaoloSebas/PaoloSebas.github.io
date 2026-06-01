@@ -123,7 +123,8 @@
             <div class="nav-container">
                 <div class="logo" onclick="navigateTo('home')">Dr. Paolo Sebastianelli</div>
                 <ul class="nav-menu">
-                    <li><a href="#" onclick="showSection('contact', event)">Contact</a></li>
+                    <li><a href="#" onclick="showSection('ds-contact', event)">Contact</a></li>
+                    <li><a href="#" onclick="showSection('euchresisdata', event)">Euchresisdata</a></li>
                 </ul>
                 <div class="nav-switch">
                     <button onclick="navigateTo('academic')" class="switch-btn">← Academic</button>
@@ -132,23 +133,38 @@
         </nav>
         
         <!-- DS Video Hero -->
-        <div class="ds-video-hero">
-            <div class="ds-logo-stage" id="dsLogoStage" aria-hidden="true">
-                <video
-                    class="ds-hero-video"
-                    autoplay
-                    muted
-                    playsinline
-                    preload="metadata"
-                    poster="videos/hero-loop-poster.png"
-                >
-                    <source src="videos/hero-loop-mobile.mp4" type="video/mp4" media="(max-width: 768px) and (orientation: portrait)">
-                    <source src="videos/hero-loop.mp4" type="video/mp4">
-                </video>
-                <div class="ds-hero-video-overlay"></div>
-                <img class="ds-hero-logo" src="videos/ecd.png" alt="Logo">
+        <section id="ds-home" class="section-content active">
+            <div class="ds-video-hero">
+                <div class="ds-logo-stage" id="dsLogoStage" aria-hidden="true">
+                    <video
+                        class="ds-hero-video"
+                        autoplay
+                        muted
+                        playsinline
+                        preload="metadata"
+                        poster="videos/hero-loop-poster.png"
+                    >
+                        <source src="videos/hero-loop-mobile.mp4" type="video/mp4" media="(max-width: 768px) and (orientation: portrait)">
+                        <source src="videos/hero-loop.mp4" type="video/mp4">
+                    </video>
+                    <div class="ds-hero-video-overlay"></div>
+                    <img class="ds-hero-logo" src="videos/ecd.png" alt="Logo">
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- DS Contact -->
+        <section id="ds-contact" class="section-content contact-section">
+            <h2>Contact</h2>
+            <div class="md-content" data-md="content/ds/contact.md"></div>
+        </section>
+
+        <!-- Euchresisdata -->
+        <section id="euchresisdata" class="section-content">
+            <div class="content-area">
+                <div class="md-content" data-md="content/ds/euchresisdata.md"></div>
+            </div>
+        </section>
 
         <!--
         <div class="content-area">
