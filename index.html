@@ -280,6 +280,14 @@
                 void logo.offsetWidth;
                 logo.classList.add("ds-hero-logo-finale");
                 stopSync();
+
+                /* Make logo clickable after animation ends */
+                logo.style.cursor = "pointer";
+                logo.setAttribute("role", "link");
+                logo.setAttribute("aria-label", "Visit Euchresisdata");
+                logo.addEventListener("click", function () {
+                    window.open("https://euchresisdata.com", "_blank", "noopener,noreferrer");
+                }, { once: false });
             }
 
             function syncFrame() {
