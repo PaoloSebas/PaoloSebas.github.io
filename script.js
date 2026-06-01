@@ -175,6 +175,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Make the DS announcement ticker use a measured distance instead of a browser-dependent percentage.
     const dsAnnouncementTrack = document.querySelector('.ds-announcement-track');
+    const dsPortfolio = document.getElementById('datascience-portfolio');
+
+    function scheduleDsAnnouncementDistanceUpdate() {
+        // Two RAFs ensure layout is settled after visibility/class changes.
+        window.requestAnimationFrame(() => {
+            window.requestAnimationFrame(updateDsAnnouncementDistance);
+        });
+    }
+
     function updateDsAnnouncementDistance() {
         if (!dsAnnouncementTrack) {
             return;
@@ -188,13 +197,32 @@ document.addEventListener('DOMContentLoaded', () => {
         const computedStyles = window.getComputedStyle(dsAnnouncementTrack);
         const gapValue = parseFloat(computedStyles.gap || computedStyles.columnGap || '0') || 0;
         const messageWidth = firstMessage.getBoundingClientRect().width || 0;
+        if (messageWidth <= 0) {
+            return;
+        }
         dsAnnouncementTrack.style.setProperty('--ds-marquee-distance', `${Math.ceil(messageWidth + gapValue)}px`);
     }
 
-    updateDsAnnouncementDistance();
+    scheduleDsAnnouncementDistanceUpdate();
     window.addEventListener('resize', () => {
-        window.requestAnimationFrame(updateDsAnnouncementDistance);
+        scheduleDsAnnouncementDistanceUpdate();
     }, { passive: true });
+
+    if (dsPortfolio) {
+        const dsVisibilityObserver = new MutationObserver(() => {
+            if (dsPortfolio.classList.contains('active')) {
+                scheduleDsAnnouncementDistanceUpdate();
+            }
+        });
+
+        dsVisibilityObserver.observe(dsPortfolio, { attributes: true, attributeFilter: ['class'] });
+    }
+
+    if (document.fonts && typeof document.fonts.ready?.then === 'function') {
+        document.fonts.ready.then(() => {
+            scheduleDsAnnouncementDistanceUpdate();
+        });
+    }
 
     // Restore last visited page on refresh
     navigateTo(initialView, initialSection, { persistState: false, smoothScroll: false });
