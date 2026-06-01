@@ -31,16 +31,6 @@ Euchresisdata uses a consulting model centered on real decision contexts:
 - Introduce a decision layer (priorities, thresholds, ownership, action windows).
 - Support adoption with team enablement and iterative refinement.
 
-## Illustrative Case Study Themes
-
-- Cross-market reporting redesign with a unified analytics workspace.
-- Executive decision cockpit design to align leadership priorities faster.
-- Voice-of-customer signal mining with multilingual NLP pipelines.
-
-## Transparency and Methodology
-
-Case studies in the Euchresisdata portfolio are simulation-based and use synthetic data. They are intended to demonstrate methods, implementation patterns, and measurable impact logic without exposing client-sensitive information.
-
 ## Positioning
 
 In short, Euchresisdata positions itself as an analytics partner for organizations that need evidence-based decisions, cleaner reporting operations, and a stronger bridge between data and execution.
