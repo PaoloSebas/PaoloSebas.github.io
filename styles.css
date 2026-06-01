@@ -9,9 +9,9 @@
 
 :root {
     --academic-color: #0f2d3f;
-    --academic-gradient: linear-gradient(135deg, #fdfaf5 0%, #f7efe3 55%, #efe5d5 100%);
+    --academic-gradient: linear-gradient(135deg, #fcf7ef 0%, #f2e9dc 55%, #e8dece 100%);
     --datascience-color: #1e3a8a;
-    --datascience-gradient: linear-gradient(135deg, #f7f8fb 0%, #eef1f6 55%, #e4e8ef 100%);
+    --datascience-gradient: linear-gradient(135deg, #f6f8fa 0%, #eaedf2 55%, #dde2ea 100%);
     --text-dark: #0f172a;
     --text-light: #f8fafc;
     --bg-light: #f5f7fb;
