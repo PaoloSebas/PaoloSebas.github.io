@@ -1,5 +1,5 @@
 <div class="blog-shell academic-blog-shell">
-  <p class="template-warning">Template preview: placeholders for future articles</p>
+  <!-- <p class="template-warning">Template preview: placeholders for future articles</p> -->
 
   <div class="blog-hero">
     <p class="blog-eyebrow">Academic Writing Space</p>
