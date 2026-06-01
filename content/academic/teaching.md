@@ -4,11 +4,11 @@
 
 My teaching philosophy is fundamentally rooted in the conviction that education is a social practice with a central goal: to foster the growth of critical and socially responsible individuals. I teach because instruction is not a detached intellectual exercise; it is an act that recognizes that "we are part of a society."
 
-<img src="Images/Firefly_Teaching.png" alt="Hi there!" width="auto" height="auto">
+<img src="Images/Firefly_Teaching1.png" alt="Hi there!" width="auto" height="auto">
 
 For me, effective teaching is a form of adaptive, real-time practice. It is a bidirectional process where the instructor serves as an expert facilitator, not merely a content transmitter. Therefore, effective learning means the active construction and interpretation of concepts, enabling students to move beyond simple memorization and develop intellectual humility—acknowledging that neither they nor I know everything, but that knowledge can be powerfully built through collaboration.
 
-<img src="Images/Firefly_Teaching.png" alt="Hi there!" width="auto" height="auto">
+<img src="Images/Firefly_Teaching2.png" alt="Hi there!" width="auto" height="auto">
 
 I structure learning as a collaboration defined by shared accountability. I utilize dialogue, reflection, and comparison to guide students towards interpreting complex concepts.
 
