@@ -290,6 +290,47 @@ body {
     border-color: rgba(37, 99, 235, 0.25);
 }
 
+.ds-announcement {
+    overflow: hidden;
+    border-top: 1px solid rgba(37, 99, 235, 0.12);
+    border-bottom: 1px solid rgba(37, 99, 235, 0.12);
+    background: linear-gradient(90deg, rgba(37, 99, 235, 0.08), rgba(255, 255, 255, 0.96), rgba(37, 99, 235, 0.08));
+    color: #123257;
+}
+
+.ds-announcement-track {
+    display: inline-flex;
+    width: max-content;
+    align-items: center;
+    gap: 4rem;
+    padding: 0.8rem 0;
+    white-space: nowrap;
+    will-change: transform;
+    animation: ds-marquee 26s linear infinite;
+}
+
+.ds-announcement-track span {
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+@keyframes ds-marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ds-announcement-track {
+        animation: none;
+        transform: none;
+    }
+}
+
 /* Content Area */
 .content-area {
     max-width: 1200px;
