@@ -385,6 +385,14 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
+#teaching .md-content p {
+    margin-bottom: 20px;
+}
+
+#teaching .md-content img {
+    margin: 32px auto 28px;
+}
+
 .md-content ul,
 .md-content ol {
     padding-left: 24px;
