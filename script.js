@@ -406,11 +406,11 @@ function enhanceTeachingContent() {
 let academicHeroSection = null;
 let cachedAcademicHeroImage = null;
 let isScrollTicking = false;
-const isEdgeBrowser = /\bEdg\//.test(navigator.userAgent);
+const HERO_PARALLAX_ENABLED = false;
 
 function shouldEnableHeroParallax() {
     const isMobileViewport = window.matchMedia('(max-width: 768px)').matches;
-    return !isEdgeBrowser && !isMobileViewport;
+    return HERO_PARALLAX_ENABLED && !isMobileViewport;
 }
 
 function applyScrollEffects() {
