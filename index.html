@@ -200,129 +200,175 @@
     <!-- DS Hero: logo-sync + parallax (ported from euchresisdata) -->
     <script>
     (function () {
-        var stage = document.getElementById("dsLogoStage");
-        if (!stage) return;
+        var initialized = false;
 
-        var video = stage.querySelector(".ds-hero-video");
-        var logo  = stage.querySelector(".ds-hero-logo");
-        if (!video || !logo) return;
+        function initDsHero() {
+            if (initialized) return;
+            initialized = true;
 
-        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+            var stage = document.getElementById("dsLogoStage");
+            if (!stage) return;
 
-        /* ── Logo-scale sync ── */
-        var rafId = null, glamTriggered = false, finalLocked = false;
+            var video = stage.querySelector(".ds-hero-video");
+            var logo  = stage.querySelector(".ds-hero-logo");
+            if (!video || !logo) return;
 
-        function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
-        function smoothstep(t) { t = clamp(t, 0, 1); return t * t * (3 - 2 * t); }
-        function lerp(a, b, t) { return a + (b - a) * t; }
+            /* Force load + play in case the video stalled while hidden */
+            video.load();
+            var playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(function () {
+                    /* Autoplay blocked — try again on first user gesture */
+                    document.addEventListener("click", function retry() {
+                        video.play();
+                        document.removeEventListener("click", retry);
+                    }, { once: true });
+                });
+            }
 
-        function logoScaleFor(p) {
-            if (p < 0.36)  return lerp(1, 0.018, smoothstep(p / 0.36));
-            if (p < 0.84)  return 0.018;
-            if (p < 0.97)  return lerp(0.018, 1.02, smoothstep((p - 0.84) / 0.13));
-            return 1.02;
-        }
+            if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-        function videoOpacityFor(p) {
-            if (p < 0.78) return 1;
-            if (p < 1)    return lerp(1, 0, smoothstep((p - 0.78) / 0.22));
-            return 0;
-        }
+            /* ── Logo-scale sync ── */
+            var rafId = null, glamTriggered = false, finalLocked = false;
 
-        function triggerGlamourBurst() {
-            logo.classList.remove("ds-hero-logo-glam");
-            void logo.offsetWidth;
-            logo.classList.add("ds-hero-logo-glam");
-        }
+            function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+            function smoothstep(t) { t = clamp(t, 0, 1); return t * t * (3 - 2 * t); }
+            function lerp(a, b, t) { return a + (b - a) * t; }
 
-        function lockFinalState() {
-            finalLocked = true;
-            video.style.opacity = "0";
-            stage.style.setProperty("--hero-logo-scale", "1");
-            logo.style.opacity = "1";
-            logo.classList.remove("ds-hero-logo-glam");
-            logo.classList.remove("ds-hero-logo-finale");
-            void logo.offsetWidth;
-            logo.classList.add("ds-hero-logo-finale");
-            stopSync();
-        }
+            function logoScaleFor(p) {
+                if (p < 0.36)  return lerp(1, 0.018, smoothstep(p / 0.36));
+                if (p < 0.84)  return 0.018;
+                if (p < 0.97)  return lerp(0.018, 1.02, smoothstep((p - 0.84) / 0.13));
+                return 1.02;
+            }
 
-        function syncFrame() {
-            if (finalLocked) return;
-            if (!video.duration || !isFinite(video.duration)) {
+            function videoOpacityFor(p) {
+                if (p < 0.78) return 1;
+                if (p < 1)    return lerp(1, 0, smoothstep((p - 0.78) / 0.22));
+                return 0;
+            }
+
+            function triggerGlamourBurst() {
+                logo.classList.remove("ds-hero-logo-glam");
+                void logo.offsetWidth;
+                logo.classList.add("ds-hero-logo-glam");
+            }
+
+            function lockFinalState() {
+                finalLocked = true;
+                video.style.opacity = "0";
+                stage.style.setProperty("--hero-logo-scale", "1");
+                logo.style.opacity = "1";
+                logo.classList.remove("ds-hero-logo-glam");
+                logo.classList.remove("ds-hero-logo-finale");
+                void logo.offsetWidth;
+                logo.classList.add("ds-hero-logo-finale");
+                stopSync();
+            }
+
+            function syncFrame() {
+                if (finalLocked) return;
+                if (!video.duration || !isFinite(video.duration)) {
+                    rafId = requestAnimationFrame(syncFrame);
+                    return;
+                }
+                var p = clamp(video.currentTime / video.duration, 0, 1);
+                stage.style.setProperty("--hero-logo-scale", logoScaleFor(p).toFixed(4));
+                video.style.opacity = videoOpacityFor(p).toFixed(3);
+
+                if (p > 0.86 && p < 0.97 && !glamTriggered) {
+                    glamTriggered = true;
+                    triggerGlamourBurst();
+                }
+                if (p >= 0.995 || video.ended) { lockFinalState(); return; }
                 rafId = requestAnimationFrame(syncFrame);
-                return;
             }
-            var p = clamp(video.currentTime / video.duration, 0, 1);
-            stage.style.setProperty("--hero-logo-scale", logoScaleFor(p).toFixed(4));
-            video.style.opacity = videoOpacityFor(p).toFixed(3);
 
-            if (p > 0.86 && p < 0.97 && !glamTriggered) {
-                glamTriggered = true;
-                triggerGlamourBurst();
+            function startSync() { if (rafId === null) rafId = requestAnimationFrame(syncFrame); }
+            function stopSync()  { if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null; } }
+
+            video.addEventListener("play",   startSync);
+            video.addEventListener("pause",  stopSync);
+            video.addEventListener("ended",  lockFinalState);
+
+            if (!video.paused) {
+                startSync();
+            } else {
+                video.addEventListener("loadedmetadata", function() {
+                    if (!video.paused) startSync();
+                    else video.play().then(startSync).catch(function(){});
+                }, { once: true });
             }
-            if (p >= 0.995 || video.ended) { lockFinalState(); return; }
-            rafId = requestAnimationFrame(syncFrame);
+
+            /* ── Mouse parallax ── */
+            if (window.matchMedia("(pointer: coarse)").matches) return;
+
+            var maxTilt = 7, maxMove = 10;
+
+            function updateIntensity() {
+                var small = window.matchMedia("(max-width: 900px)").matches;
+                maxTilt = small ? 4 : 7;
+                maxMove = small ? 6 : 10;
+            }
+            updateIntensity();
+            var vq = window.matchMedia("(max-width: 900px)");
+            if (vq && vq.addEventListener) vq.addEventListener("change", updateIntensity);
+
+            function resetTransforms() {
+                stage.style.setProperty("--tilt-x", "0deg");
+                stage.style.setProperty("--tilt-y", "0deg");
+                stage.style.setProperty("--move-x", "0px");
+                stage.style.setProperty("--move-y", "0px");
+            }
+
+            var prafId = null, lastX = 0, lastY = 0;
+
+            function applyTransforms() {
+                prafId = null;
+                var nx = (lastX / window.innerWidth)  * 2 - 1;
+                var ny = (lastY / window.innerHeight) * 2 - 1;
+                stage.style.setProperty("--tilt-x", (-ny * maxTilt).toFixed(2) + "deg");
+                stage.style.setProperty("--tilt-y", ( nx * maxTilt).toFixed(2) + "deg");
+                stage.style.setProperty("--move-x", ( nx * maxMove).toFixed(1) + "px");
+                stage.style.setProperty("--move-y", ( ny * maxMove).toFixed(1) + "px");
+            }
+
+            function queueTransform(x, y) {
+                lastX = x; lastY = y;
+                if (prafId === null) prafId = requestAnimationFrame(applyTransforms);
+            }
+
+            if (window.PointerEvent) {
+                window.addEventListener("pointermove",   function(e) { queueTransform(e.clientX, e.clientY); });
+                window.addEventListener("pointerleave",  resetTransforms);
+                window.addEventListener("pointercancel", resetTransforms);
+            } else {
+                window.addEventListener("mousemove",  function(e) { queueTransform(e.clientX, e.clientY); });
+                window.addEventListener("mouseleave", resetTransforms);
+            }
+            window.addEventListener("blur", resetTransforms);
         }
 
-        function startSync() { if (rafId === null) rafId = requestAnimationFrame(syncFrame); }
-        function stopSync()  { if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null; } }
+        /* Watch for the datascience-portfolio becoming active */
+        var dsPortfolio = document.getElementById("datascience-portfolio");
+        if (!dsPortfolio) return;
 
-        video.addEventListener("play",   startSync);
-        video.addEventListener("pause",  stopSync);
-        video.addEventListener("ended",  lockFinalState);
-        if (!video.paused) { startSync(); }
-        else { video.addEventListener("loadedmetadata", startSync, { once: true }); }
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(m) {
+                if (m.type === "attributes" && m.attributeName === "class") {
+                    if (dsPortfolio.classList.contains("active")) {
+                        /* Small delay matches the 100ms setTimeout in navigateTo() */
+                        setTimeout(initDsHero, 150);
+                    }
+                }
+            });
+        });
+        observer.observe(dsPortfolio, { attributes: true });
 
-        /* ── Mouse parallax ── */
-        var reducedMotion  = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        var isCoarsePointer = window.matchMedia("(pointer: coarse)").matches;
-        if (reducedMotion || isCoarsePointer) return;
-
-        var maxTilt = 7, maxMove = 10;
-
-        function updateIntensity() {
-            var small = window.matchMedia("(max-width: 900px)").matches;
-            maxTilt = small ? 4 : 7;
-            maxMove = small ? 6 : 10;
+        /* Also handle direct load into datascience view (localStorage restore) */
+        if (dsPortfolio.classList.contains("active")) {
+            setTimeout(initDsHero, 150);
         }
-        updateIntensity();
-        var vq = window.matchMedia("(max-width: 900px)");
-        if (vq && vq.addEventListener) vq.addEventListener("change", updateIntensity);
-
-        function resetTransforms() {
-            stage.style.setProperty("--tilt-x", "0deg");
-            stage.style.setProperty("--tilt-y", "0deg");
-            stage.style.setProperty("--move-x", "0px");
-            stage.style.setProperty("--move-y", "0px");
-        }
-
-        var prafId = null, lastX = 0, lastY = 0;
-
-        function applyTransforms() {
-            prafId = null;
-            var nx = (lastX / window.innerWidth)  * 2 - 1;
-            var ny = (lastY / window.innerHeight) * 2 - 1;
-            stage.style.setProperty("--tilt-x", (-ny * maxTilt).toFixed(2) + "deg");
-            stage.style.setProperty("--tilt-y", ( nx * maxTilt).toFixed(2) + "deg");
-            stage.style.setProperty("--move-x", ( nx * maxMove).toFixed(1) + "px");
-            stage.style.setProperty("--move-y", ( ny * maxMove).toFixed(1) + "px");
-        }
-
-        function queueTransform(x, y) {
-            lastX = x; lastY = y;
-            if (prafId === null) prafId = requestAnimationFrame(applyTransforms);
-        }
-
-        if (window.PointerEvent) {
-            window.addEventListener("pointermove",  function(e) { queueTransform(e.clientX, e.clientY); });
-            window.addEventListener("pointerleave", resetTransforms);
-            window.addEventListener("pointercancel",resetTransforms);
-        } else {
-            window.addEventListener("mousemove",  function(e) { queueTransform(e.clientX, e.clientY); });
-            window.addEventListener("mouseleave", resetTransforms);
-        }
-        window.addEventListener("blur", resetTransforms);
     })();
     </script>
 </body>
