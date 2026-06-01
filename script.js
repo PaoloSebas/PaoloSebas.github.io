@@ -319,6 +319,13 @@ async function loadMarkdownSections() {
             }
 
             const markdown = await response.text();
+            if (/\/blog\.md$/i.test(src)) {
+                // Blog files intentionally contain HTML layout blocks.
+                // Inject directly to avoid parser-specific HTML block quirks.
+                block.innerHTML = markdown;
+                continue;
+            }
+
             if (window.marked) {
                 block.innerHTML = window.marked.parse(markdown);
             } else {
