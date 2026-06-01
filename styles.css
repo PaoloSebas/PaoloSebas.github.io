@@ -394,6 +394,11 @@ body {
     color: var(--text-dark);
 }
 
+#teaching .md-content #teaching-history + h2,
+#teaching .md-content h2 {
+    margin-top: 28px;
+}
+
 #teaching .md-content .teaching-media {
     margin: 48px 0;
 }

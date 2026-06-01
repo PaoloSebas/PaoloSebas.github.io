@@ -15,7 +15,7 @@ I owe this wonderful quote to my mentor, Professor Giovanni. Our paths first cro
 
 <img src="Images/agro.png" alt="Hi there!" width="150" height="auto">
 
-To learn more about my approach to education, please explore my <a href="#" onclick="showSection('teaching'); setTimeout(() => document.getElementById('teaching-philosophy')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120); return false;">Teaching Philosophy</a>, or review my professional background under <a href="#" onclick="showSection('teaching'); setTimeout(() => document.getElementById('teaching-employments')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120); return false;">Teaching History</a>.
+To learn more about my approach to education, please explore my <a href="#" onclick="showSection('teaching'); setTimeout(() => document.getElementById('teaching-philosophy')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120); return false;">Teaching Philosophy</a>, or review my professional background under <a href="#" onclick="showSection('teaching'); setTimeout(() => document.getElementById('teaching-history')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120); return false;">Teaching History</a>.
 
 
 ---
