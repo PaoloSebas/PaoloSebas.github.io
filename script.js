@@ -348,6 +348,9 @@ function enhanceTeachingContent() {
 let academicHeroSection = null;
 let cachedAcademicHeroImage = null;
 let isScrollTicking = false;
+const isEdgeBrowser = /\bEdg\//.test(navigator.userAgent);
+const isMobileViewport = window.matchMedia('(max-width: 768px)').matches;
+const enableHeroParallax = !isEdgeBrowser && !isMobileViewport;
 
 function applyScrollEffects() {
     isScrollTicking = false;
@@ -365,7 +368,11 @@ function applyScrollEffects() {
     }
 
     if (academicHeroSection) {
+        if (!enableHeroParallax) {
+            academicHeroSection.style.transform = '';
+        } else {
         academicHeroSection.style.transform = `translateY(${parallaxOffset}px)`;
+        }
     }
 
     // Fade out academic hero image on scroll.
