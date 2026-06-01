@@ -122,7 +122,8 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo" onclick="navigateTo('home')">Dr. Paolo Sebastianelli</div>
-                <ul class="nav-menu">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="datascience-nav-menu">☰</button>
+                <ul id="datascience-nav-menu" class="nav-menu">
                     <li><a href="#" onclick="showSection('ds-contact', event)">Contact</a></li>
                     <li><a href="#" onclick="showSection('euchresisdata', event)">Euchresisdata</a></li>
                 </ul>
