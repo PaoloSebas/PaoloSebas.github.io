@@ -173,6 +173,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const initialView = savedState?.view ?? 'home';
     const initialSection = savedState?.section ?? '';
 
+    // Make the DS announcement ticker use a measured distance instead of a browser-dependent percentage.
+    const dsAnnouncementTrack = document.querySelector('.ds-announcement-track');
+    function updateDsAnnouncementDistance() {
+        if (!dsAnnouncementTrack) {
+            return;
+        }
+
+        const firstMessage = dsAnnouncementTrack.querySelector('span');
+        if (!firstMessage) {
+            return;
+        }
+
+        const computedStyles = window.getComputedStyle(dsAnnouncementTrack);
+        const gapValue = parseFloat(computedStyles.gap || computedStyles.columnGap || '0') || 0;
+        const messageWidth = firstMessage.getBoundingClientRect().width || 0;
+        dsAnnouncementTrack.style.setProperty('--ds-marquee-distance', `${Math.ceil(messageWidth + gapValue)}px`);
+    }
+
+    updateDsAnnouncementDistance();
+    window.addEventListener('resize', () => {
+        window.requestAnimationFrame(updateDsAnnouncementDistance);
+    }, { passive: true });
+
     // Restore last visited page on refresh
     navigateTo(initialView, initialSection, { persistState: false, smoothScroll: false });
 

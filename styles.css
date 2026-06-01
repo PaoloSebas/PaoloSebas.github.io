@@ -320,7 +320,7 @@ body {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-50%);
+        transform: translateX(calc(-1 * var(--ds-marquee-distance, 0px)));
     }
 }
 
