@@ -9,8 +9,8 @@
 
 <div class="blog-grid">
 <article class="blog-card">
-<p class="blog-card-meta">Template · Coming soon</p>
-<h4><a href="#" onclick="showSection('academic-blog-article', event)">From Lab Concepts to Classroom Understanding</a></h4>
+<p class="blog-card-meta">To be or not to be?</p>
+<h4><a href="#" onclick="showSection('academic-blog-article', event)">Physics, Chemistry or Mathematics? All of them, thanks!</a></h4>
 <p>...</p>
 </article>
 
