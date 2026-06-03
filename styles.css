@@ -124,10 +124,12 @@ body {
 
 .datascience-side .ds-intro-artboard {
     display: block;
-    width: 240px;
-    height: 240px;
-    width: clamp(240px, 36vw, 420px);
-    height: clamp(240px, 36vw, 420px);
+    width: 264px;
+    height: 264px;
+    width: clamp(264px, 30vw, 462px);
+    height: clamp(264px, 30vw, 462px);
+    max-width: 62%;
+    max-height: 52vh;
     margin: 18px auto 0;
     object-fit: contain;
 }
@@ -816,10 +818,12 @@ body {
     }
 
     .datascience-side .ds-intro-artboard {
-        width: 216px;
-        height: 216px;
-        width: clamp(216px, 42vw, 360px);
-        height: clamp(216px, 42vw, 360px);
+        width: 238px;
+        height: 238px;
+        width: clamp(238px, 34vw, 396px);
+        height: clamp(238px, 34vw, 396px);
+        max-width: 74%;
+        max-height: 40vh;
         margin-top: 14px;
     }
     
