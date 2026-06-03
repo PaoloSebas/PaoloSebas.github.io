@@ -122,6 +122,15 @@ body {
     opacity: 0.9;
 }
 
+.datascience-side .ds-intro-artboard {
+    display: block;
+    width: min(52vw, 560px);
+    max-width: 88%;
+    height: auto;
+    margin: 18px auto 0;
+    object-fit: contain;
+}
+
 /* Portfolio Sections */
 .portfolio-section {
     display: none;
@@ -803,6 +812,12 @@ body {
     
     .split-half p {
         font-size: 1rem;
+    }
+
+    .datascience-side .ds-intro-artboard {
+        width: min(72vw, 420px);
+        max-width: 92%;
+        margin-top: 14px;
     }
     
     .nav-container {
