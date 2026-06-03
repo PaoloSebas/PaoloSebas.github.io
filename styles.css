@@ -124,8 +124,8 @@ body {
 
 .datascience-side .ds-intro-artboard {
     display: block;
-    width: min(52vw, 560px);
-    max-width: 88%;
+    width: clamp(80px, 12vw, 140px);
+    aspect-ratio: 1 / 1;
     height: auto;
     margin: 18px auto 0;
     object-fit: contain;
@@ -815,8 +815,7 @@ body {
     }
 
     .datascience-side .ds-intro-artboard {
-        width: min(72vw, 420px);
-        max-width: 92%;
+        width: clamp(72px, 20vw, 120px);
         margin-top: 14px;
     }
     
