@@ -140,13 +140,21 @@ body {
     opacity: 0.9;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1366px) {
     .split-screen.ipad-intro-cycle .academic-side::before {
         animation: ipadAcademicReveal 2s ease-out 1;
     }
 
     .split-screen.ipad-intro-cycle .datascience-side::before {
         animation: ipadDataScienceReveal 2s ease-out 1;
+    }
+
+    .split-screen.ipad-intro-cycle .academic-side .overlay {
+        animation: ipadAcademicOverlay 2s ease-out 1;
+    }
+
+    .split-screen.ipad-intro-cycle .datascience-side .overlay {
+        animation: ipadDataScienceOverlay 2s ease-out 1;
     }
 
     .split-screen.ipad-intro-cycle .academic-side .content {
@@ -160,25 +168,37 @@ body {
 
 @keyframes ipadAcademicReveal {
     0%, 10% { opacity: 0; }
-    30%, 45% { opacity: 0.24; }
+    30%, 45% { opacity: 0.34; }
     70%, 100% { opacity: 0; }
 }
 
 @keyframes ipadDataScienceReveal {
     0%, 45% { opacity: 0; }
-    65%, 85% { opacity: 0.18; }
+    65%, 85% { opacity: 0.28; }
     100% { opacity: 0; }
+}
+
+@keyframes ipadAcademicOverlay {
+    0%, 10% { background: rgba(255, 255, 255, 0.2); }
+    30%, 45% { background: rgba(248, 250, 252, 0.38); }
+    70%, 100% { background: rgba(255, 255, 255, 0.2); }
+}
+
+@keyframes ipadDataScienceOverlay {
+    0%, 45% { background: rgba(255, 255, 255, 0.2); }
+    65%, 85% { background: rgba(241, 245, 249, 0.34); }
+    100% { background: rgba(255, 255, 255, 0.2); }
 }
 
 @keyframes ipadAcademicContent {
     0%, 12% { transform: scale(1); }
-    30%, 45% { transform: scale(1.045); }
+    30%, 45% { transform: scale(1.06); }
     70%, 100% { transform: scale(1); }
 }
 
 @keyframes ipadDataScienceContent {
     0%, 45% { transform: scale(1); }
-    65%, 85% { transform: scale(1.045); }
+    65%, 85% { transform: scale(1.06); }
     100% { transform: scale(1); }
 }
 
