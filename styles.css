@@ -375,7 +375,8 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: clamp(10px, 1.8vw, 16px);
+    max-width: 100%;
 }
 
 .academic-hero-title h1 {
@@ -385,6 +386,7 @@ body {
 .academic-profile-picture {
     width: 4.5rem;
     height: 4.5rem;
+    flex-shrink: 0;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -908,6 +910,10 @@ body {
         transform: none;
     }
     
+    .academic-hero-title {
+        gap: 10px;
+    }
+
     .hero-section h1 {
         font-size: 2.2rem;
     }
@@ -969,8 +975,33 @@ body {
         width: 100%;
     }
 
+    .academic-hero-title {
+        gap: 8px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.85rem;
+        line-height: 1.15;
+    }
+
+    .academic-profile-picture {
+        width: 2.15rem;
+        height: 2.15rem;
+    }
+
     .gallery-item {
         margin: 20px 0;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-section h1 {
+        font-size: 3.2rem;
+    }
+
+    .academic-profile-picture {
+        width: 3.6rem;
+        height: 3.6rem;
     }
 }
 
