@@ -1012,6 +1012,39 @@ body {
     }
 }
 
+/* Final responsive overrides for Academic hero */
+#academic-home .academic-hero-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #academic-home .academic-hero-title {
+        flex-direction: row !important;
+        gap: 12px !important;
+    }
+
+    #academic-home .academic-profile-picture {
+        width: 3.9rem !important;
+        height: 3.9rem !important;
+    }
+}
+
+@media (max-width: 767px) {
+    #academic-home .academic-hero-title {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    #academic-home .academic-profile-picture {
+        width: 3.5rem !important;
+        height: 3.5rem !important;
+    }
+}
+
 /* ── Data Science Video Hero ─────────────────────────────── */
 .ds-video-hero {
     position: relative;
