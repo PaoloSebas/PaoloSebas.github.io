@@ -2,6 +2,7 @@
 let currentView = 'home'; // 'home', 'academic', 'datascience'
 let currentSection = '';
 const NAV_STATE_KEY = 'ps_portfolio_nav_state';
+const IPAD_INTRO_KEY = 'ps_ipad_intro_played';
 
 const VIEW_SECTIONS = {
     academic: new Set(['academic-home', 'education', 'research', 'publications', 'presentation', 'teaching', 'academic-about', 'academic-blog', 'academic-blog-article', 'contact']),
@@ -167,6 +168,39 @@ function smoothScrollTo(top) {
     }
 }
 
+function isIpadViewport() {
+    const inTabletRange = window.matchMedia('(min-width: 768px) and (max-width: 1024px)').matches;
+    const hasTouch = 'ontouchstart' in window || (navigator.maxTouchPoints || 0) > 1;
+    return inTabletRange && hasTouch;
+}
+
+function maybeRunIpadHomepageIntro(initialView) {
+    if (!isIpadViewport() || initialView !== 'home') {
+        return;
+    }
+
+    try {
+        if (sessionStorage.getItem(IPAD_INTRO_KEY) === '1') {
+            return;
+        }
+        sessionStorage.setItem(IPAD_INTRO_KEY, '1');
+    } catch {
+        // Ignore storage availability issues.
+    }
+
+    const homepage = document.getElementById('homepage');
+    if (!homepage) {
+        return;
+    }
+
+    window.setTimeout(() => {
+        homepage.classList.add('ipad-intro-cycle');
+        window.setTimeout(() => {
+            homepage.classList.remove('ipad-intro-cycle');
+        }, 2000);
+    }, 180);
+}
+
 // Add smooth scrolling
 document.addEventListener('DOMContentLoaded', () => {
     const savedState = getSavedNavigationState();
@@ -175,6 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Restore last visited page on refresh
     navigateTo(initialView, initialSection, { persistState: false, smoothScroll: false });
+    maybeRunIpadHomepageIntro(initialView);
 
     // Load markdown content for sections
     loadMarkdownSections().then(() => {

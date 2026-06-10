@@ -140,6 +140,48 @@ body {
     opacity: 0.9;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .split-screen.ipad-intro-cycle .academic-side::before {
+        animation: ipadAcademicReveal 2s ease-out 1;
+    }
+
+    .split-screen.ipad-intro-cycle .datascience-side::before {
+        animation: ipadDataScienceReveal 2s ease-out 1;
+    }
+
+    .split-screen.ipad-intro-cycle .academic-side .content {
+        animation: ipadAcademicContent 2s ease-out 1;
+    }
+
+    .split-screen.ipad-intro-cycle .datascience-side .content {
+        animation: ipadDataScienceContent 2s ease-out 1;
+    }
+}
+
+@keyframes ipadAcademicReveal {
+    0%, 10% { opacity: 0; }
+    30%, 45% { opacity: 0.24; }
+    70%, 100% { opacity: 0; }
+}
+
+@keyframes ipadDataScienceReveal {
+    0%, 45% { opacity: 0; }
+    65%, 85% { opacity: 0.18; }
+    100% { opacity: 0; }
+}
+
+@keyframes ipadAcademicContent {
+    0%, 12% { transform: scale(1); }
+    30%, 45% { transform: scale(1.045); }
+    70%, 100% { transform: scale(1); }
+}
+
+@keyframes ipadDataScienceContent {
+    0%, 45% { transform: scale(1); }
+    65%, 85% { transform: scale(1.045); }
+    100% { transform: scale(1); }
+}
+
 .datascience-side .ds-intro-artboard {
     display: block;
     width: 264px;
