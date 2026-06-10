@@ -72,7 +72,8 @@ body {
 }
 
 .academic-side::before {
-    background-image: url("Images/academic.png");
+    background-image: url("Images/sfondo.png");
+    background-position: center center;
 }
 
 .datascience-side::before {
@@ -81,6 +82,12 @@ body {
 
 .split-half:hover::before {
     opacity: 0.18;
+}
+
+.academic-side:hover::before,
+.academic-side:focus-visible::before,
+.academic-side:active::before {
+    opacity: 0.24;
 }
 
 .split-half .overlay {
@@ -97,6 +104,12 @@ body {
     background: rgba(255, 255, 255, 0.05);
 }
 
+.academic-side:hover .overlay,
+.academic-side:focus-visible .overlay,
+.academic-side:active .overlay {
+    background: rgba(248, 250, 252, 0.34);
+}
+
 .split-half .content {
     position: relative;
     z-index: 2;
@@ -108,6 +121,11 @@ body {
 
 .split-half:hover .content {
     transform: scale(1.05);
+}
+
+.academic-side .content h1,
+.academic-side .content p {
+    text-shadow: 0 2px 8px rgba(15, 23, 42, 0.2);
 }
 
 .split-half h1 {
