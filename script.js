@@ -4,7 +4,7 @@ let currentSection = '';
 const NAV_STATE_KEY = 'ps_portfolio_nav_state';
 
 const VIEW_SECTIONS = {
-    academic: new Set(['academic-home', 'education', 'research', 'publications', 'teaching', 'academic-about', 'academic-blog', 'academic-blog-article', 'contact']),
+    academic: new Set(['academic-home', 'education', 'research', 'publications', 'presentation', 'teaching', 'academic-about', 'academic-blog', 'academic-blog-article', 'contact']),
     datascience: new Set(['ds-home', 'projects', 'skills', 'tools', 'certifications', 'ds-about', 'ds-blog', 'ds-blog-article', 'contact', 'ds-contact', 'euchresisdata'])
 };
 
