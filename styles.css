@@ -734,7 +734,7 @@ body {
     background: #fff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .md-gallery {
         padding: 0 12px 30px;
     }
@@ -911,6 +911,7 @@ body {
     }
     
     .academic-hero-title {
+        flex-direction: column;
         gap: 10px;
     }
 
@@ -919,8 +920,8 @@ body {
     }
 
     .academic-profile-picture {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 3.15rem;
+        height: 3.15rem;
     }
 
     .hero-section {
@@ -976,6 +977,7 @@ body {
     }
 
     .academic-hero-title {
+        flex-direction: column;
         gap: 8px;
     }
 
@@ -985,8 +987,8 @@ body {
     }
 
     .academic-profile-picture {
-        width: 2.15rem;
-        height: 2.15rem;
+        width: 3rem;
+        height: 3rem;
     }
 
     .gallery-item {
@@ -994,7 +996,12 @@ body {
     }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+    .academic-hero-title {
+        flex-direction: row;
+        gap: 12px;
+    }
+
     .hero-section h1 {
         font-size: 3.2rem;
     }
