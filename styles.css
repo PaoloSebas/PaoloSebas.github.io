@@ -744,6 +744,20 @@ body {
     display: block;
 }
 
+.gallery-image-wide {
+    width: 100%;
+    height: clamp(200px, 34vw, 360px);
+    object-fit: contain;
+    object-position: center;
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+}
+
+@supports not (object-fit: contain) {
+    .gallery-image-wide {
+        height: auto;
+    }
+}
+
 .gallery-caption {
     padding: 20px 24px;
     font-size: 1.1rem;
@@ -755,6 +769,10 @@ body {
 @media (max-width: 767px) {
     .md-gallery {
         padding: 0 12px 30px;
+    }
+
+    .gallery-image-wide {
+        height: clamp(170px, 50vw, 250px);
     }
 }
 

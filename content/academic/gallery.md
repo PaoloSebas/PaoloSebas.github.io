@@ -7,7 +7,7 @@ After graduating, I worked as a sales representative for a pharma marketing and 
 "You should be thankful that this scientific topic is a mess, otherwise we wouldn’t be here." G.Camino
 ---
 
-<img src="Images/Fuoco.jpg" alt="Hi there!" width="150" height="auto">
+<img class="gallery-image-wide" src="Images/Poli.PNG" alt="Polymer combustion presentation">
 
 I owe this wonderful quote to my mentor, Professor Giovanni. Our paths first crossed back in 2008 during my Master’s program in Polymer Science and Technology with [Proplast](https://www.proplast.it/), where he taught polymer chemistry. That connection led me to join his research group as the Fire Lab Manager, a role where I truly immersed myself in—and mastered—the world of polymer combustion.
 
