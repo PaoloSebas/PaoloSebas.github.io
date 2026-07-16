@@ -1,8 +1,9 @@
 <div class="blog-article-shell">
   <p><a class="article-back-link" href="#" onclick="showSection('academic-blog', event)">← Back to Academic Blog</a></p>
-  <p class="template-pill">Physics, Chemistry, or Mathematics?</p>
+  <p class="template-pill">Physics, Chemistry, or Mathematics?</p> <br>
 
- When I started my career in materials chemistry, I had something completely different in mind. I thought I would win a Nobel Prize with some exceptional discovery useful to the entire world. Well, just to be clear, it's not like I've done useless things in my life, but I don't think I'll ever reach the Nobel Prize.
+
+When I started my career in materials chemistry, I had something completely different in mind. I thought I would win a Nobel Prize with some exceptional discovery useful to the entire world. Well, just to be clear, it's not like I've done useless things in my life, but I don't think I'll ever reach the Nobel Prize.
 
 But that's not the point.
 
